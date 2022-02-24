@@ -27,17 +27,30 @@ public class HelloController {
     public String sonidoCompra = "src/main/resources/com/example/ekonos/sonidos/sonidoCompraAccion.wav";
     public String sonidoVenta = "src/main/resources/com/example/ekonos/sonidos/sonidoVentaAccion.wav";
 
+    //ImageView accions empreses
+    public ArrayList<ImageView> accionsAlphaImatges=new ArrayList<>();
+    public ArrayList<ImageView> accionsBetaImatges=new ArrayList<>();
+    public ArrayList<ImageView> accionsGammaImatges=new ArrayList<>();
+    public ArrayList<ImageView> accionsDeltaImatges=new ArrayList<>();
+    public ArrayList<ImageView> accionsEpsilonImatges=new ArrayList<>();
+    public ArrayList<ImageView> accionsOmegaImatges=new ArrayList<>();
+
+
     @FXML
     private TextField nomJugador;
 
     @FXML
-    public Label alphaJugadorAccions, betaJugadorAccions, gammaJugadorAccions, deltaJugadorAccions, epsilonJugadorAccions, omegaJugadorAccions, totlJugadorAccions;
+    public Label alphaJugadorAccions, betaJugadorAccions, gammaJugadorAccions, deltaJugadorAccions, epsilonJugadorAccions, ultimaJugadorAccions, totalJugadorAccions;
 
     @FXML
     private Label monedas;
 
     @FXML
     private Button compraAlpha, compraBeta, compraGamma, compraDelta, compraEpsilon, compraOmega, venAlpha, venBeta, venGamma, venDelta, venEpsilon, venOmega;
+
+    @FXML
+    //Accions empresa
+    public ImageView alphaAccio1,alphaAccio2,alphaAccio3,alphaAccio4,alphaAccio5,alphaAccio6,alphaAccio7,alphaAccio8,betaAccio1,betaAccio2,betaAccio3,betaAccio4,betaAccio5,betaAccio6,betaAccio7,betaAccio8,gammaAccio1,gammaAccio2,gammaAccio3,gammaAccio4,gammaAccio5,gammaAccio6,gammaAccio7,gammaAccio8,deltaAccio1,deltaAccio2,deltaAccio3,deltaAccio4,deltaAccio5,deltaAccio6,deltaAccio7,deltaAccio8,epsilonAccio1,epsilonAccio2,epsilonAccio3,epsilonAccio4,epsilonAccio5,epsilonAccio6,epsilonAccio7,epsilonAccio8,omegaAccio1,omegaAccio2,omegaAccio3,omegaAccio4,omegaAccio5,omegaAccio6,omegaAccio7,omegaAccio8;
 
     //Imatges peçes registre
     @FXML
