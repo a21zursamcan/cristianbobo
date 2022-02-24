@@ -78,14 +78,28 @@ public class taulell {
     }
 
     public void actualitzaAccionsPantallaJugador(empresa empresa){
-        hc.alphaJugadorAccions.setText(empreses.get(0).numeroAccionsJugador(jugadorActual)+"");
-        hc.betaJugadorAccions.setText(empreses.get(1).numeroAccionsJugador(jugadorActual)+"");
-        hc.deltaJugadorAccions.setText(empreses.get(2).numeroAccionsJugador(jugadorActual)+"");
-//        hc.epsilonJugadorAccions.setText(empreses.get(3).numeroAccionsJugador(jugadorActual)+"");
-        hc.gammaJugadorAccions.setText(empreses.get(4).numeroAccionsJugador(jugadorActual)+"");
-//        hc.omegaJugadorAccions.setText(empreses.get(5).numeroAccionsJugador(jugadorActual)+"");
+        int accions;
+        int accionstotals;
+        accions=empreses.get(0).numeroAccionsJugador(jugadorActual);
+        hc.alphaJugadorAccions.setText(accions+"");
+        accionstotals=accions;
+        accions=empreses.get(1).numeroAccionsJugador(jugadorActual);
+        accionstotals=accionstotals+accions;
+        hc.betaJugadorAccions.setText(accions+"");
+        accions=empreses.get(2).numeroAccionsJugador(jugadorActual);
+        accionstotals=accionstotals+accions;
+        hc.gammaJugadorAccions.setText(accions+"");
+        accions=empreses.get(3).numeroAccionsJugador(jugadorActual);
+        accionstotals=accionstotals+accions;
+        hc.deltaJugadorAccions.setText(accions+"");
+        accions=empreses.get(4).numeroAccionsJugador(jugadorActual);
+        accionstotals=accionstotals+accions;
+        hc.epsilonJugadorAccions.setText(accions+"");
+        accions=empreses.get(5).numeroAccionsJugador(jugadorActual);
+        accionstotals=accionstotals+accions;
+        hc.ultimaJugadorAccions.setText(accions+"");
 
-
+        hc.totalJugadorAccions.setText(accionstotals+"");
     }
 
     public void compraAccions(String nomEmpresa) {
@@ -168,7 +182,65 @@ public class taulell {
         this.numeroRondas = this.seleccionaNumeroRondes();
         this.cartesPerTorn = this.seleccionaCartesPerTorn();
         this.iniciRonda();
+        this.inicialitzaImatgesAccions();
         jocIniciat = true;
+    }
+
+    public void inicialitzaImatgesAccions(){
+        hc.accionsAlphaImatges.add(hc.alphaAccio1);
+        hc.accionsAlphaImatges.add(hc.alphaAccio2);
+        hc.accionsAlphaImatges.add(hc.alphaAccio3);
+        hc.accionsAlphaImatges.add(hc.alphaAccio4);
+        hc.accionsAlphaImatges.add(hc.alphaAccio5);
+        hc.accionsAlphaImatges.add(hc.alphaAccio6);
+        hc.accionsAlphaImatges.add(hc.alphaAccio7);
+        hc.accionsAlphaImatges.add(hc.alphaAccio8);
+
+        hc.accionsBetaImatges.add(hc.betaAccio1);
+        hc.accionsBetaImatges.add(hc.betaAccio2);
+        hc.accionsBetaImatges.add(hc.betaAccio3);
+        hc.accionsBetaImatges.add(hc.betaAccio4);
+        hc.accionsBetaImatges.add(hc.betaAccio5);
+        hc.accionsBetaImatges.add(hc.betaAccio6);
+        hc.accionsBetaImatges.add(hc.betaAccio7);
+        hc.accionsBetaImatges.add(hc.betaAccio8);
+
+        hc.accionsDeltaImatges.add(hc.deltaAccio1);
+        hc.accionsDeltaImatges.add(hc.deltaAccio2);
+        hc.accionsDeltaImatges.add(hc.deltaAccio3);
+        hc.accionsDeltaImatges.add(hc.deltaAccio4);
+        hc.accionsDeltaImatges.add(hc.deltaAccio5);
+        hc.accionsDeltaImatges.add(hc.deltaAccio6);
+        hc.accionsDeltaImatges.add(hc.deltaAccio7);
+        hc.accionsDeltaImatges.add(hc.deltaAccio8);
+
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio1);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio2);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio3);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio4);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio5);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio6);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio7);
+        hc.accionsEpsilonImatges.add(hc.epsilonAccio8);
+
+        hc.accionsGammaImatges.add(hc.gammaAccio1);
+        hc.accionsGammaImatges.add(hc.gammaAccio2);
+        hc.accionsGammaImatges.add(hc.gammaAccio3);
+        hc.accionsGammaImatges.add(hc.gammaAccio4);
+        hc.accionsGammaImatges.add(hc.gammaAccio5);
+        hc.accionsGammaImatges.add(hc.gammaAccio6);
+        hc.accionsGammaImatges.add(hc.gammaAccio7);
+        hc.accionsGammaImatges.add(hc.gammaAccio8);
+
+        hc.accionsOmegaImatges.add(hc.omegaAccio1);
+        hc.accionsOmegaImatges.add(hc.omegaAccio2);
+        hc.accionsOmegaImatges.add(hc.omegaAccio3);
+        hc.accionsOmegaImatges.add(hc.omegaAccio4);
+        hc.accionsOmegaImatges.add(hc.omegaAccio5);
+        hc.accionsOmegaImatges.add(hc.omegaAccio6);
+        hc.accionsOmegaImatges.add(hc.omegaAccio7);
+        hc.accionsOmegaImatges.add(hc.omegaAccio8);
+
     }
 
     public void iniciRonda() {
@@ -378,12 +450,13 @@ public class taulell {
     }
 
     public void generarEmpreses() {
-        empreses.add(new empresa("Alpha", "vermell", hc.presidentAlpha));
-        empreses.add(new empresa("Delta", "verd", hc.presidentDelta));
-        empreses.add(new empresa("Beta", "blauFort", hc.presidentBeta));
-        empreses.add(new empresa("Gamma", "blau", hc.presidentGamma));
-        empreses.add(new empresa("Omega", "rosa", hc.presidentOmega));
-        empreses.add(new empresa("Epsilon", "groc", hc.presidentEpsilon));
+        empreses.add(new empresa("Alpha", "vermell", hc.presidentAlpha, hc.accionsAlphaImatges));
+        empreses.add(new empresa("Beta", "blauFort", hc.presidentBeta, hc.accionsBetaImatges));
+        empreses.add(new empresa("Gamma", "blau", hc.presidentGamma, hc.accionsGammaImatges));
+        empreses.add(new empresa("Delta", "verd", hc.presidentDelta, hc.accionsDeltaImatges));
+        empreses.add(new empresa("Epsilon", "groc", hc.presidentEpsilon, hc.accionsEpsilonImatges));
+        empreses.add(new empresa("Omega", "rosa", hc.presidentOmega, hc.accionsOmegaImatges));
+
     }
 
     public Image traduirColor(String color) {

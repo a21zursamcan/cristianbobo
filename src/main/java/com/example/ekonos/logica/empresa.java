@@ -19,14 +19,16 @@ public class empresa {
 	public Image carta=null;
 	public Image casella=null;
 	ImageView imgPresident;
-	public ArrayList<ImageView> ImatgesAccions=new ArrayList<>();
+	public ArrayList<ImageView> ImatgesAccions;
 	public ArrayList<Pane> PaneFactorsDeCreixement=new ArrayList<>();
 
-	empresa(String nom, String color, ImageView imgPresident) {
+	empresa(String nom, String color, ImageView imgPresident, ArrayList<ImageView> ImatgesAccions) {
 		this.nom = nom;
 		this.color = color;
 		this.imgPresident=imgPresident;
+		this.ImatgesAccions=ImatgesAccions;
 		creaCartayCasellaEmpresa();
+
 	}
 
 	public void actualitzaImatgesAccions(){
