@@ -97,13 +97,13 @@
                     <Label layoutX="39.0" layoutY="107.0" text="epsilon" textFill="WHITE" />
                     <Label layoutX="39.0" layoutY="123.0" text="omega" textFill="WHITE" />
                     <Label layoutX="14.0" layoutY="144.0" text="TOTAL" textFill="WHITE" />
-                    <Label fx:id="totlAccionsJugador" layoutX="104.0" layoutY="140.0" text="0" textFill="WHITE" />
+                    <Label fx:id="totalJugadorAccions" layoutX="104.0" layoutY="140.0" text="0" textFill="WHITE" />
                     <Label fx:id="alphaJugadorAccions" alignment="CENTER" layoutX="104.0" layoutY="43.0" text="0" textAlignment="RIGHT" textFill="WHITE" />
                     <Label fx:id="betaJugadorAccions" layoutX="104.0" layoutY="59.0" text="0" textFill="WHITE" />
-                    <Label fx:id="gammaJugadorAccions" layoutX="104.0" layoutY="71.0" text="0" textFill="WHITE" />
-                    <Label fx:id="deltaJugadorAccions" layoutX="104.0" layoutY="87.0" text="0" textFill="WHITE" />
-                    <Label fx:id="epsilonJugadorAccions" layoutX="104.0" layoutY="103.0" text="0" textFill="WHITE" />
-                    <Label fx:id="omegaAccionsJugador" layoutX="104.0" layoutY="119.0" text="0" textFill="WHITE" />
+                    <Label fx:id="gammaJugadorAccions" layoutX="104.0" layoutY="76.0" text="0" textFill="WHITE" />
+                    <Label fx:id="deltaJugadorAccions" layoutX="104.0" layoutY="90.0" text="0" textFill="WHITE" />
+                    <Label fx:id="epsilonJugadorAccions" layoutX="104.0" layoutY="105.0" text="0" textFill="WHITE" />
+                    <Label fx:id="ultimaJugadorAccions" layoutX="104.0" layoutY="124.0" text="0" textFill="WHITE" />
                     <ImageView fitHeight="30.0" fitWidth="53.0" layoutX="20.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                         <image>
                             <Image url="@images/monedinxis.jpeg" />
@@ -303,60 +303,60 @@
                         </image>
                     </ImageView>
                     <ImageView fx:id="presidentAlpha" fitHeight="38.0" fitWidth="40.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio1" fitHeight="38.0" fitWidth="40.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio2" fitHeight="38.0" fitWidth="40.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio3" fitHeight="38.0" fitWidth="40.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio4" fitHeight="38.0" fitWidth="40.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio5" fitHeight="38.0" fitWidth="40.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio6" fitHeight="38.0" fitWidth="40.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio7" fitHeight="38.0" fitWidth="40.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="alphaAccio8" fitHeight="38.0" fitWidth="40.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="presidentBeta" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio1" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio2" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio3" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio4" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio5" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio6" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio7" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="betaAccio8" fitHeight="38.0" fitWidth="40.0" layoutX="40.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="presidentGamma" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio1" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio2" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio3" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio4" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio5" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio6" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio7" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="gammaAccio8" fitHeight="38.0" fitWidth="40.0" layoutX="80.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="presidentDelta" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio1" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio2" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio3" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio4" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio5" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio6" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio7" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="deltaAccio8" fitHeight="38.0" fitWidth="40.0" layoutX="464.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="presidentEpsilon" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio1" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio2" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio3" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio4" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio5" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio6" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio7" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="epsilonAccio8" fitHeight="38.0" fitWidth="40.0" layoutX="504.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="presidentOmega" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
-                    <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
-                    <Button layoutY="109.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
+                    <ImageView fx:id="omegaAccio1" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio2" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio3" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio4" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio5" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio6" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio7" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+                    <ImageView fx:id="omegaAccio8" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
+                    <Button  layoutY="109.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Button layoutY="147.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Button layoutY="188.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Button layoutY="223.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
