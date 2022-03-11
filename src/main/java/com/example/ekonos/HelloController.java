@@ -200,8 +200,12 @@ public class HelloController {
     @FXML
     public void peça1click() {
         if (IntrodueixNomUsuari) {
-            String nom = fiIntrodueixJugador(peça1);
-            t.insertaJugador(peça1.getImage(), this, nom);
+            if(this.nomJugador.getText().equals("")){
+
+            }else{
+                String nom = fiIntrodueixJugador(peça1);
+                t.insertaJugador(peça1.getImage(), this, nom);
+            }
         } else {
             t.ReproducirSonido(sonidoClick);
             introdueixJugador(peça1);
@@ -212,8 +216,11 @@ public class HelloController {
     @FXML
     public void peça2click() {
         if (IntrodueixNomUsuari) {
+            if(this.nomJugador.getText().equals("")){
+
+            }else{
             String nom = fiIntrodueixJugador(peça2);
-            t.insertaJugador(peça2.getImage(), this, nom);
+            t.insertaJugador(peça2.getImage(), this, nom);}
         } else {
             t.ReproducirSonido(sonidoClick);
             introdueixJugador(peça2);
@@ -224,8 +231,11 @@ public class HelloController {
     @FXML
     public void peça3click() {
         if (IntrodueixNomUsuari) {
+            if(this.nomJugador.getText().equals("")){
+
+            }else{
             String nom = fiIntrodueixJugador(peça3);
-            t.insertaJugador(peça2.getImage(), this, nom);
+            t.insertaJugador(peça2.getImage(), this, nom);}
         } else {
             t.ReproducirSonido(sonidoClick);
             introdueixJugador(peça3);
@@ -235,9 +245,13 @@ public class HelloController {
 
     @FXML
     public void peça4click() {
+
         if (IntrodueixNomUsuari) {
+            if(this.nomJugador.getText().equals("")){
+
+            }else{
             String nom = fiIntrodueixJugador(peça4);
-            t.insertaJugador(peça2.getImage(), this, nom);
+            t.insertaJugador(peça2.getImage(), this, nom);}
         } else {
             t.ReproducirSonido(sonidoClick);
             introdueixJugador(peça4);
@@ -248,9 +262,13 @@ public class HelloController {
     @FXML
     public void peça5click() {
         if (IntrodueixNomUsuari) {
+            if(this.nomJugador.getText().equals("")){
+
+            }else{
             String nom = fiIntrodueixJugador(peça5);
-            t.insertaJugador(peça2.getImage(), this, nom);
+            t.insertaJugador(peça2.getImage(), this, nom);}
         } else {
+
             t.ReproducirSonido(sonidoClick);
             introdueixJugador(peça5);
         }
@@ -260,8 +278,12 @@ public class HelloController {
     @FXML
     public void peça6click() {
         if (IntrodueixNomUsuari) {
+            if(this.nomJugador.getText().equals("")){
+                System.out.println(nomJugador);
+            }else{
+                System.out.println(nomJugador);
             String nom = fiIntrodueixJugador(peça6);
-            t.insertaJugador(peça2.getImage(), this, nom);
+            t.insertaJugador(peça2.getImage(), this, nom);}
         } else {
             t.ReproducirSonido(sonidoClick);
             introdueixJugador(peça6);
@@ -270,7 +292,7 @@ public class HelloController {
     }
 
     public void introdueixJugador(ImageView peça) {
-        next.setDisable(true);
+        next.setVisible(false);
         imageMemoria = peça.getImage();
         desactivaPeçes();
         peça.setDisable(false);
@@ -287,7 +309,9 @@ public class HelloController {
         String nom = nomJugador.getText();
         nomJugador.setText("");
         nomJugador.setVisible(false);
-        next.setDisable(false);
+        if(t.jugadors.size()>=3){
+            next.setVisible(true);
+        }
         return nom;
     }
 

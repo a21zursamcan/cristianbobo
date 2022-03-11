@@ -33,7 +33,11 @@ public class empresa {
 
 	public void actualitzaImatgesAccions(){
 		for(int x=0; x<this.ImatgesAccions.size(); x++){
-			this.ImatgesAccions.get(x).setImage(accions.get(x).peça);
+			try{
+				this.ImatgesAccions.get(x).setImage(accions.get(x).peça);
+			}catch (IndexOutOfBoundsException e){
+				this.ImatgesAccions.get(x).setImage(null);
+			}
 		}
 	}
 
