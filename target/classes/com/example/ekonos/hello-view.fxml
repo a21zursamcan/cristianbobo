@@ -356,7 +356,7 @@
                     <ImageView fx:id="omegaAccio6" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="omegaAccio7" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="omegaAccio8" fitHeight="38.0" fitWidth="40.0" layoutX="544.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
-                    <Button  layoutY="109.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
+                    <Button layoutY="109.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Button layoutY="147.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Button layoutY="188.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Button layoutY="223.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
@@ -518,6 +518,11 @@
                 </image>
             </ImageView>
          <TextField fx:id="nomJugador" layoutX="958.0" layoutY="541.0" prefHeight="25.0" prefWidth="114.0" visible="false" />
+         <ImageView id="demoButton" fitHeight="38.0" fitWidth="114.0" layoutX="1203.0" onMouseClicked="#onDemoClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/demo.png" />
+            </image>
+         </ImageView>
         </children>
     </Pane>
 </VBox>

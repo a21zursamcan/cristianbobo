@@ -518,7 +518,7 @@
                 </image>
             </ImageView>
          <TextField fx:id="nomJugador" layoutX="958.0" layoutY="541.0" prefHeight="25.0" prefWidth="114.0" visible="false" />
-         <ImageView fitHeight="38.0" fitWidth="114.0" layoutX="1203.0" onMouseClicked="#onDemoClick" pickOnBounds="true" preserveRatio="true">
+         <ImageView id="demoButton" fitHeight="38.0" fitWidth="114.0" layoutX="1203.0" onMouseClicked="#onDemoClick" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/demo.png" />
             </image>

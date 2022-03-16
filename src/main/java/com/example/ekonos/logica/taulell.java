@@ -32,8 +32,70 @@ public class taulell {
     public int cartesPerTorn;
     public jugador primerJugador = null;
 
-    public void demo(){
+    public void demo(HelloController hc) throws SQLException, IOException {
+
+        this.hc=hc;
+
+        generarEmpreses();
+
+        jugadorActual = jugadors.get(0);
+//        hc.demoButton.setVisible(false);
+        actualitzarDades();
+
+
+
         jugadors=new ArrayList<jugador>();
+        jugadors.add(new jugador(null,1, "Perico"));
+        jugadors.add(new jugador(null,2, "Pedro"));
+        jugadors.add(new jugador(null,3, "Paco"));
+        jugadors.add(new jugador(null,4, "Pablo"));
+        jugadors.add(new jugador(null,5, "Patricio"));
+        jugadors.add(new jugador(null,6, "Samuel"));
+
+        insertarJugadoresBaseDatos();
+
+        empreses.get(0).nFilials = 3;
+        empreses.get(1).nFilials = 4;
+        empreses.get(2).nFilials = 2;
+        empreses.get(3).nFilials = 4;
+        empreses.get(4).nFilials = 1;
+        empreses.get(5).nFilials = 2;
+
+        persistencia.inserirDadesPartida(empreses);
+
+        empreses.get(0).accions.add(jugadors.get(0));
+        empreses.get(0).accions.add(jugadors.get(5));
+        empreses.get(0).accions.add(jugadors.get(3));
+        empreses.get(0).accions.add(jugadors.get(4));
+        empreses.get(0).accions.add(jugadors.get(2));
+        empreses.get(0).president=jugadors.get(0);
+
+
+        empreses.get(1).accions.add(jugadors.get(5));
+        empreses.get(1).accions.add(jugadors.get(1));
+        empreses.get(1).president=jugadors.get(5);
+
+        empreses.get(2).accions.add(jugadors.get(3));
+        empreses.get(2).accions.add(jugadors.get(5));
+        empreses.get(2).accions.add(jugadors.get(2));
+        empreses.get(2).accions.add(jugadors.get(1));
+        empreses.get(2).accions.add(jugadors.get(1));
+        empreses.get(2).accions.add(jugadors.get(1));
+        empreses.get(2).president=jugadors.get(1);
+
+        empreses.get(3).accions.add(jugadors.get(4));
+        empreses.get(3).accions.add(jugadors.get(0));
+        empreses.get(3).president=jugadors.get(4);
+
+        empreses.get(4).accions.add(jugadors.get(0));
+        empreses.get(4).president=jugadors.get(0);
+
+        empreses.get(5).accions.add(jugadors.get(4));
+        empreses.get(5).accions.add(jugadors.get(4));
+        empreses.get(5).accions.add(jugadors.get(2));
+        empreses.get(5).president=jugadors.get(4);
+
+        persistencia.inserirDadesJuga(jugadors, empreses);
     }
 
     public void ReproducirSonido(String nombreSonido) {

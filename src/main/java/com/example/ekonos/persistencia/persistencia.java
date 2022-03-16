@@ -23,7 +23,7 @@ public class persistencia {
      * @throws SQLException
      * @throws IOException
      */
-    public static Connection iniciaBD() throws SQLException, IOException {
+    public static void iniciaBD() throws SQLException, IOException {
         final String IP = "labs.inspedralbes.cat";
         final String NOMBD = "a20crimoldia_ekonos";
         String url = "jdbc:mysql://" + IP + ":3306/" + NOMBD;
@@ -32,13 +32,11 @@ public class persistencia {
         System.out.println("-Inicia connexió-");
         conexio = DriverManager.getConnection(url, usuari, password);
         System.out.println("Connected to database");
-        return conexio;
     }
 
     /** Metodo para cerrar la base de datos
-     * @param conexio conexion a la base de datos
      */
-    public static void tancarBD(Connection conexio) {
+    public static void tancarBD() {
         try {
             System.out.println("Base de dades tancada");
             conexio.close();
@@ -54,8 +52,8 @@ public class persistencia {
      */
     public static void inserirPruebaReal(ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
-        inserirJugadors(conexio, jugadors);
-        tancarBD(conexio);
+        inserirJugadors(jugadors);
+        tancarBD();
     }
 
     /** Metodo para leer y devolver la contraseña del fichero "fitxUsuari"
@@ -84,11 +82,10 @@ public class persistencia {
 
     /**
      * Metodo para crear jugadores en base de datos
-     * @param conexio conexion a la base de datos
      * @param jugadors array de jugadores
      * @throws SQLException
      */
-    public static void inserirJugadors(Connection conexio, ArrayList<jugador> jugadors) throws SQLException {
+    public static void inserirJugadors(ArrayList<jugador> jugadors) throws SQLException {
 
         boolean jugadorCreat=true;
         final String NOM_TAULA = "JUGADOR";
@@ -122,7 +119,7 @@ public class persistencia {
         }while(jugadorCreat==false);
     }
 
-    public static void inserirDadesJuga (Connection conexio, ArrayList<jugador> jugadors, ArrayList<empresa> empresas) throws SQLException {
+    public static void inserirDadesJuga (ArrayList<jugador> jugadors, ArrayList<empresa> empresas) throws SQLException {
         boolean jugadorCreat = true;
         final String NOM_TAULA = "JUGA";
         int nAccionsAlpha, nAccionsBeta, nAccionsDelta, nAccionsGamma, nAccionsEpsilon, nAccionsOmega;
@@ -159,7 +156,7 @@ public class persistencia {
     }
 
 
-    public static void inserirDadesPartida(Connection conexio, ArrayList<jugador> jugadors, ArrayList<empresa> empresas) throws SQLException {
+    public static void inserirDadesPartida(ArrayList<empresa> empreses) throws SQLException {
 
         //ArrayList<taulell> filials
         //ArrayList<casella> filials
@@ -168,25 +165,25 @@ public class persistencia {
         final String NOM_TAULA = "PARTIDA";
 
         int filialCrexementAlpha, filialCrexementBeta, filialCrexementDelta, filialCrexementGamma, filialCrexementEpsilon, filialCrexementOmega;
-        int nMonedes;
 
         String nomEmpresa = null;
         //Autoincremente en idPartida
         int idPartida=0;
         do {
             System.out.println("-BD: Insertant dades per partida-");
-            for (int i=0; i< empresas.size(); i++){
-               // nomEmpresa = empresas.get(i).nom;
+            for (int i=0; i< empreses.size(); i++){
+               // nomEmpresa = empreses.get(i).nom;
                 //Dades del jugador
                 //Numero de factor de empresa
-                filialCrexementAlpha = empresas.get(0).nFilials; //sacar filial
-                filialCrexementBeta = empresas.get(1).nFilials;
-                filialCrexementDelta = empresas.get(2).nFilials;
-                filialCrexementEpsilon = empresas.get(3).nFilials;
-                filialCrexementOmega = empresas.get(4).nFilials;
+                filialCrexementAlpha = empreses.get(0).nFilials; //sacar filial
+                filialCrexementBeta = empreses.get(1).nFilials;
+                filialCrexementDelta = empreses.get(2).nFilials;
+                filialCrexementGamma = empreses.get(3).nFilials;
+                filialCrexementEpsilon = empreses.get(4).nFilials;
+                filialCrexementOmega = empreses.get(5).nFilials;
                 //nomJugador = nomJugadorEscrit;
                 idPartida = 0;
-                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + idPartida + "," + filialCrexementAlpha + "," +  filialCrexementBeta +  "," + filialCrexementDelta +  "," + filialCrexementEpsilon +  "," + filialCrexementOmega + ");";
+                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + idPartida + "," + filialCrexementAlpha + "," +  filialCrexementBeta +  "," + filialCrexementDelta +  ","  + filialCrexementGamma + "," + filialCrexementEpsilon +  "," + filialCrexementOmega + ");";
 
                 Statement sta = null;
                 try {

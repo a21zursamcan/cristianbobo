@@ -38,6 +38,9 @@ public class HelloController {
     public ArrayList<ImageView> accionsOmegaImatges=new ArrayList<>();
 
     @FXML
+    public Button demoButton;
+
+    @FXML
     private TextField nomJugador;
 
     @FXML
@@ -99,8 +102,8 @@ public class HelloController {
     public ImageView imatgeAssignada1Empresa1, imatgeAssignada1Empresa2, imatgeAssignada1Empresa3, imatgeAssignada1Empresa4, imatgeAssignada1Empresa5, imatgeAssignada1Empresa6;
 
     @FXML
-    protected void onDemoClick(){
-        t.demo();
+    protected void onDemoClick() throws SQLException, IOException {
+        t.demo(this);
     }
 
     //Metode per desapareixer la carta1
