@@ -32,6 +32,10 @@ public class taulell {
     public int cartesPerTorn;
     public jugador primerJugador = null;
 
+    public void demo(){
+        jugadors=new ArrayList<jugador>();
+    }
+
     public void ReproducirSonido(String nombreSonido) {
         try {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(nombreSonido));
@@ -77,8 +81,12 @@ public class taulell {
             actualitzaAccionsPantallaJugador(empreses.get(i));
         }
 
-        persistencia.inserirPruebaReal(jugadors);
 
+
+    }
+
+    public void insertarJugadoresBaseDatos() throws SQLException, IOException {
+        persistencia.inserirPruebaReal(jugadors);
     }
 
 

@@ -37,7 +37,6 @@ public class HelloController {
     public ArrayList<ImageView> accionsEpsilonImatges=new ArrayList<>();
     public ArrayList<ImageView> accionsOmegaImatges=new ArrayList<>();
 
-
     @FXML
     private TextField nomJugador;
 
@@ -98,6 +97,11 @@ public class HelloController {
     //Imatgeview amb l'imatge ja assignada
     @FXML
     public ImageView imatgeAssignada1Empresa1, imatgeAssignada1Empresa2, imatgeAssignada1Empresa3, imatgeAssignada1Empresa4, imatgeAssignada1Empresa5, imatgeAssignada1Empresa6;
+
+    @FXML
+    protected void onDemoClick(){
+        t.demo();
+    }
 
     //Metode per desapareixer la carta1
     @FXML
@@ -192,6 +196,8 @@ public class HelloController {
         imgJugadorActual.setImage(t.jugadors.get(0).peça);
         imgJugadorActual.setVisible(true);
         next.setVisible(false);
+
+        t.insertarJugadoresBaseDatos();
     }
 
     public void setTitol1(String text) {
