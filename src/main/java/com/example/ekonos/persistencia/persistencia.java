@@ -136,7 +136,7 @@ public class persistencia {
                 nAccionsGamma = empresas.get(3).numeroAccionsJugador(jugadors.get(i));
                 nAccionsEpsilon = empresas.get(4).numeroAccionsJugador(jugadors.get(i));
                 nAccionsOmega = empresas.get(5).numeroAccionsJugador(jugadors.get(i));
-                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + nAccionsAlpha + ");"; //Terminar secuencia
+                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + nAccionsAlpha + nAccionsBeta + nAccionsDelta + nAccionsGamma + nAccionsEpsilon + nAccionsOmega +");"; //Terminar secuencia
 
                 Statement sta = null;
                 try {
@@ -167,24 +167,28 @@ public class persistencia {
         boolean jugadorCreat=true;
         final String NOM_TAULA = "PARTIDA";
 
-        int filiaCrexementAlpha, filiaCrexementBeta, filiaCrexementDelta, filiaCrexementGamma, filiaCrexementEpsilon, filiaCrexementOmega;
+        int filialCrexementAlpha, filialCrexementBeta, filialCrexementDelta, filialCrexementGamma, filialCrexementEpsilon, filialCrexementOmega;
         int nMonedes;
 
-        String nomEmpresa = null, nomJugador;
+        String nomEmpresa = null;
         //Autoincremente en idPartida
         int idPartida=0;
         do {
             System.out.println("-BD: Insertant dades per partida-");
-            for (int i=0; i<jugadors.size(); i++){
+            for (int i=0; i< empresas.size(); i++){
                // nomEmpresa = empresas.get(i).nom;
                 //Dades del jugador
-                nomJugador = jugadors.get(i).nom;
-                nMonedes = jugadors.get(i).unitatMonetaria;
+                //nomJugador = jugadors.get(i).nom;
+                //nMonedes = jugadors.get(i).unitatMonetaria;
                 //Numero de factor de empresa
-               /* filiaCrexementAlpha = empresas.get(0). //sacar filial*/
+                filialCrexementAlpha = empresas.get(0).nFilials; //sacar filial
+                filialCrexementBeta = empresas.get(1).nFilials;
+                filialCrexementDelta = empresas.get(2).nFilials;
+                filialCrexementEpsilon = empresas.get(3).nFilials;
+                filialCrexementOmega = empresas.get(4).nFilials;
                 //nomJugador = nomJugadorEscrit;
                 idPartida = 0;
-                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + idPartida + "," + "'" + nomJugador + "'" + ");";
+                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + idPartida + "," + "'" + filialCrexementAlpha + "'" + ");";
 
                 Statement sta = null;
                 try {
