@@ -1,9 +1,11 @@
 package com.example.ekonos.logica;
 
 import com.example.ekonos.HelloController;
+import com.example.ekonos.persistencia.persistencia;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.IOException;
@@ -50,7 +52,7 @@ public class taulell {
         return new Image(f.getParent() + File.separator + nomImatge);
     }
 
-    public void insertaJugador(Image peçaJugador, HelloController hc, String nom) {
+    public void insertaJugador(Image peçaJugador, HelloController hc, String nom) throws SQLException,IOException{
         System.out.println(nom);
         this.hc = hc;
         int numeroJugador = jugadors.size();
@@ -65,7 +67,7 @@ public class taulell {
         }
     }
 
-    public void actualitzarDades() {
+    public void actualitzarDades() throws SQLException,IOException{
         hc.cambiaMonedas(jugadorActual.unitatMonetaria);
         hc.actualitzaCartes();
         for (int i = 0; i < empreses.size(); i++) {
@@ -75,7 +77,10 @@ public class taulell {
             actualitzaAccionsPantallaJugador(empreses.get(i));
         }
 
+        persistencia.inserirPruebaReal(jugadors);
+
     }
+
 
     public void actualitzaAccionsPantallaJugador(empresa empresa){
         int accions;
@@ -102,7 +107,7 @@ public class taulell {
         hc.totalJugadorAccions.setText(accionstotals+"");
     }
 
-    public void compraAccions(String nomEmpresa) {
+    public void compraAccions(String nomEmpresa) throws SQLException,IOException{
         if (cartaColocada) {
             this.ReproducirSonido(hc.sonidoCompra);
             empresa empresaActual = tradueixEmpresa(nomEmpresa);
@@ -127,7 +132,7 @@ public class taulell {
         }
     }
 
-    public void vendreAccions(String nomEmpresa) {
+    public void vendreAccions(String nomEmpresa) throws SQLException,IOException{
         if (cartaColocada) {
             this.ReproducirSonido(hc.sonidoVenta);
             empresa empresaActual = tradueixEmpresa(nomEmpresa);
@@ -176,7 +181,7 @@ public class taulell {
         return null;
     }
 
-    public void iniciarJoc() {
+    public void iniciarJoc() throws SQLException,IOException{
         this.generarEmpreses();
         this.generaCaselles();
         this.numeroRondas = this.seleccionaNumeroRondes();
@@ -243,7 +248,7 @@ public class taulell {
 
     }
 
-    public void iniciRonda() {
+    public void iniciRonda() throws SQLException,IOException{
         //Generem les cartes
         this.generarCartes();
         //Remenem les cartes
@@ -251,7 +256,7 @@ public class taulell {
         tornJugador(0);
     }
 
-    public void tornJugador(int jugador) {
+    public void tornJugador(int jugador) throws SQLException,IOException{
         jugadorActual = jugadors.get(jugador);
         cobrament(jugadors.get(jugador));
         jugadorActual.ma = agafaCartes(cartesPerTorn);

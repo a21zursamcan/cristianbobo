@@ -12,6 +12,8 @@ import javafx.scene.image.ImageView;
 import com.example.ekonos.logica.taulell;
 import javafx.scene.layout.GridPane;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 
@@ -179,7 +181,7 @@ public class HelloController {
     }
 
     @FXML
-    public void onNextClick() {
+    public void onNextClick() throws SQLException, IOException {
         t.jugadorActual = t.jugadors.get(0);
         t.iniciarJoc();
 
@@ -198,7 +200,7 @@ public class HelloController {
 
 
     @FXML
-    public void peça1click() {
+    public void peça1click() throws SQLException, IOException {
         if (IntrodueixNomUsuari) {
             if(this.nomJugador.getText().equals("")){
 
@@ -214,7 +216,7 @@ public class HelloController {
     }
 
     @FXML
-    public void peça2click() {
+    public void peça2click() throws SQLException, IOException {
         if (IntrodueixNomUsuari) {
             if(this.nomJugador.getText().equals("")){
 
@@ -229,7 +231,7 @@ public class HelloController {
     }
 
     @FXML
-    public void peça3click() {
+    public void peça3click() throws SQLException, IOException {
         if (IntrodueixNomUsuari) {
             if(this.nomJugador.getText().equals("")){
 
@@ -244,7 +246,7 @@ public class HelloController {
     }
 
     @FXML
-    public void peça4click() {
+    public void peça4click() throws SQLException, IOException {
 
         if (IntrodueixNomUsuari) {
             if(this.nomJugador.getText().equals("")){
@@ -260,7 +262,7 @@ public class HelloController {
     }
 
     @FXML
-    public void peça5click() {
+    public void peça5click() throws SQLException, IOException {
         if (IntrodueixNomUsuari) {
             if(this.nomJugador.getText().equals("")){
 
@@ -276,7 +278,7 @@ public class HelloController {
     }
 
     @FXML
-    public void peça6click() {
+    public void peça6click() throws SQLException, IOException {
         if (IntrodueixNomUsuari) {
             if(this.nomJugador.getText().equals("")){
                 System.out.println(nomJugador);
@@ -335,73 +337,73 @@ public class HelloController {
 
 
     @FXML
-    protected void onCompraAlpha() {
+    protected void onCompraAlpha() throws SQLException, IOException {
         t.compraAccions("Alpha");
 
     }
 
     @FXML
-    protected void onCompraBeta() {
+    protected void onCompraBeta() throws SQLException, IOException {
         t.compraAccions("Beta");
 
     }
 
     @FXML
-    protected void onCompraGamma() {
+    protected void onCompraGamma() throws SQLException, IOException {
         t.compraAccions("Gamma");
 
     }
 
     @FXML
-    protected void onCompraDelta() {
+    protected void onCompraDelta() throws SQLException, IOException {
         t.compraAccions("Delta");
 
     }
 
     @FXML
-    protected void onCompraEpsilon() {
+    protected void onCompraEpsilon() throws SQLException, IOException {
         t.compraAccions("Epsilon");
 
     }
 
     @FXML
-    protected void onCompraOmega() {
+    protected void onCompraOmega() throws SQLException, IOException {
         t.compraAccions("Omega");
 
     }
 
     @FXML
-    protected void onVenAlpha() {
+    protected void onVenAlpha() throws SQLException, IOException {
         t.vendreAccions("Alpha");
 
     }
 
     @FXML
-    protected void onVenBeta() {
+    protected void onVenBeta() throws SQLException, IOException {
         t.vendreAccions("Beta");
 
     }
 
     @FXML
-    protected void onVenGamma() {
+    protected void onVenGamma() throws SQLException, IOException {
         t.vendreAccions("Gamma");
 
     }
 
     @FXML
-    protected void onVenDelta() {
+    protected void onVenDelta() throws SQLException, IOException {
         t.vendreAccions("Delta");
 
     }
 
     @FXML
-    protected void onVenEpsilon() {
+    protected void onVenEpsilon() throws SQLException, IOException {
         t.vendreAccions("Epsilon");
 
     }
 
     @FXML
-    protected void onVenOmega() {
+    protected void onVenOmega() throws SQLException, IOException {
         t.vendreAccions("Omega");
     }
 
