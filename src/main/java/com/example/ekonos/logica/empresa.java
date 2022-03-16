@@ -21,6 +21,7 @@ public class empresa {
 	ImageView imgPresident;
 	public ArrayList<ImageView> ImatgesAccions;
 	public ArrayList<Pane> PaneFactorsDeCreixement=new ArrayList<>();
+	int nFilials = 0;
 
 	empresa(String nom, String color, ImageView imgPresident, ArrayList<ImageView> ImatgesAccions) {
 		this.nom = nom;
