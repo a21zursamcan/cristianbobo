@@ -38,9 +38,7 @@ public class taulell {
 
         generarEmpreses();
 
-        jugadorActual = jugadors.get(0);
-//        hc.demoButton.setVisible(false);
-        actualitzarDades();
+
 
 
 
@@ -53,6 +51,10 @@ public class taulell {
         jugadors.add(new jugador(null,6, "Samuel"));
 
         insertarJugadoresBaseDatos();
+
+        jugadorActual = jugadors.get(0);
+//        hc.demoButton.setVisible(false);
+        actualitzarDades();
 
         empreses.get(0).nFilials = 3;
         empreses.get(1).nFilials = 4;
