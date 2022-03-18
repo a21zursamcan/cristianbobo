@@ -32,6 +32,7 @@ public class persistencia {
         System.out.println("-Inicia connexió-");
         conexio = DriverManager.getConnection(url, usuari, password);
         System.out.println("Connected to database");
+        //return conexio;
     }
 
     /** Metodo para cerrar la base de datos
@@ -50,9 +51,11 @@ public class persistencia {
      * @throws SQLException
      * @throws IOException
      */
-    public static void inserirPruebaReal(ArrayList jugadors) throws SQLException, IOException {
+    public static void inserirPruebaReal(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
         inserirJugadors(jugadors);
+        inserirDadesPartida(empreses);
+        inserirDadesJuga(empreses, jugadors);
         tancarBD();
     }
 
@@ -82,6 +85,7 @@ public class persistencia {
 
     /**
      * Metodo para crear jugadores en base de datos
+     *
      * @param jugadors array de jugadores
      * @throws SQLException
      */
@@ -90,7 +94,7 @@ public class persistencia {
         boolean jugadorCreat=true;
         final String NOM_TAULA = "JUGADOR";
         String nomJugador = null, nomJugadorEscrit = null;
-        int id=0, idEscrit = 0;
+        int id=0;
         do {
             System.out.println("-BD: Insertant jugador-");
             for (int i=0; i<jugadors.size(); i++){
@@ -122,11 +126,13 @@ public class persistencia {
     public static void inserirDadesJuga (ArrayList<jugador> jugadors, ArrayList<empresa> empresas) throws SQLException {
         boolean jugadorCreat = true;
         final String NOM_TAULA = "JUGA";
+        int id_partida=0, id_jugador=0;
         int nAccionsAlpha, nAccionsBeta, nAccionsDelta, nAccionsGamma, nAccionsEpsilon, nAccionsOmega;
         do {
             System.out.println("-BD: Insertant dades per partida-");
             for (int i = 0; i < jugadors.size(); i++) {
                 //Numero de accions del jugador en la empresa
+
                 nAccionsAlpha = empresas.get(0).numeroAccionsJugador(jugadors.get(i));
                 nAccionsBeta = empresas.get(1).numeroAccionsJugador(jugadors.get(i));
                 nAccionsDelta = empresas.get(2).numeroAccionsJugador(jugadors.get(i));
@@ -164,7 +170,7 @@ public class persistencia {
         boolean jugadorCreat=true;
         final String NOM_TAULA = "PARTIDA";
 
-        int filialCrexementAlpha, filialCrexementBeta, filialCrexementDelta, filialCrexementGamma, filialCrexementEpsilon, filialCrexementOmega;
+        int filialCrexementAlpha=0, filialCrexementBeta=0, filialCrexementDelta=0, filialCrexementGamma=0, filialCrexementEpsilon=0, filialCrexementOmega=0;
 
         String nomEmpresa = null;
         //Autoincremente en idPartida

@@ -43,12 +43,12 @@ public class taulell {
 
 
         jugadors=new ArrayList<jugador>();
-        jugadors.add(new jugador(null,1, "Perico"));
-        jugadors.add(new jugador(null,2, "Pedro"));
-        jugadors.add(new jugador(null,3, "Paco"));
-        jugadors.add(new jugador(null,4, "Pablo"));
-        jugadors.add(new jugador(null,5, "Patricio"));
-        jugadors.add(new jugador(null,6, "Samuel"));
+        jugadors.add(new jugador(null,1, "PericoZ"));
+        jugadors.add(new jugador(null,2, "PedroZ"));
+        jugadors.add(new jugador(null,3, "PacoZ"));
+        jugadors.add(new jugador(null,4, "PabloZ"));
+        jugadors.add(new jugador(null,5, "PatricioZ"));
+        jugadors.add(new jugador(null,6, "SamuelZ"));
 
         insertarJugadoresBaseDatos();
 
@@ -150,7 +150,7 @@ public class taulell {
     }
 
     public void insertarJugadoresBaseDatos() throws SQLException, IOException {
-        persistencia.inserirPruebaReal(jugadors);
+        persistencia.inserirPruebaReal(empreses, jugadors);
     }
 
 
