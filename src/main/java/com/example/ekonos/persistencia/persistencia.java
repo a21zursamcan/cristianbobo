@@ -51,9 +51,9 @@ public class persistencia {
      * @throws SQLException
      * @throws IOException
      */
-    public static void inserirPruebaReal(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
+    public static void inserirPruebaRealJugador(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
-        inserirJugadors(jugadors);
+        inserirDadesJugadors(jugadors);
 //        inserirDadesPartida(empreses);
 //        inserirDadesJuga(empreses, jugadors);
         tancarBD();
@@ -113,7 +113,7 @@ public class persistencia {
      * @param jugadors array de jugadores
      * @throws SQLException
      */
-    public static void inserirJugadors(ArrayList<jugador> jugadors) throws SQLException {
+    public static void inserirDadesJugadors(ArrayList<jugador> jugadors) throws SQLException {
 
         boolean jugadorCreat=true;
         final String NOM_TAULA = "JUGADOR";
@@ -164,9 +164,8 @@ public class persistencia {
         String nomEmpresa = null;
         //Autoincremente en idPartida
         int idPartida=0;
-        do {
+
             System.out.println("-BD: Insertant dades per partida-");
-            for (int i=0; i< empreses.size(); i++){
                 // nomEmpresa = empreses.get(i).nom;
                 //Dades del jugador
                 //Numero de factor de empresa
@@ -197,8 +196,7 @@ public class persistencia {
                 } finally {
                     sta.close();
                 }
-            }
-        }while(jugadorCreat==false);
+
     }
 
     /** Metodo para crear en la base de datos las acciones por jugador y empresa en la partida.
@@ -216,15 +214,25 @@ public class persistencia {
             for (int i = 0; i < jugadors.size(); i++) {
                 //Numero de accions del jugador en la empresa
 
-                nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
-                nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
-                nAccionsDelta = empreses.get(2).numeroAccionsJugador(jugadors.get(i));
-                nAccionsGamma = empreses.get(3).numeroAccionsJugador(jugadors.get(i));
-                nAccionsEpsilon = empreses.get(4).numeroAccionsJugador(jugadors.get(i));
-                nAccionsOmega = empreses.get(5).numeroAccionsJugador(jugadors.get(i));
+                id_partida = 1;
+                id_jugador = 1;
+                nAccionsAlpha = 1;
+                nAccionsBeta = 1;
+                nAccionsDelta = 1;
+                nAccionsGamma = 1;
+                nAccionsEpsilon = 1;
+                nAccionsOmega = 1;
+
+//                nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
+//                nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
+//                nAccionsDelta = empreses.get(2).numeroAccionsJugador(jugadors.get(i));
+//                nAccionsGamma = empreses.get(3).numeroAccionsJugador(jugadors.get(i));
+//                nAccionsEpsilon = empreses.get(4).numeroAccionsJugador(jugadors.get(i));
+//                nAccionsOmega = empreses.get(5).numeroAccionsJugador(jugadors.get(i));
 
 
-                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + "(nAccAlpha, nAccBeta, nAccDelta, nAccGamma, nAccEpsilon, nAccOmega)" + " VALUES (" + nAccionsAlpha + "," +nAccionsBeta + "," +nAccionsDelta + "," +nAccionsGamma + "," +nAccionsEpsilon + "," +nAccionsOmega +");"; //Terminar secuencia
+                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + id_partida + "," + id_jugador + "," + nAccionsAlpha + "," +nAccionsBeta + "," +nAccionsDelta + "," +nAccionsGamma + "," +nAccionsEpsilon + "," +nAccionsOmega +");"; //Terminar secuencia
+
 
                 Statement sta = null;
                 try {

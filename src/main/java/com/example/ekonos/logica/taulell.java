@@ -153,7 +153,7 @@ public class taulell {
     }
 
     public void insertarJugadoresBaseDatos() throws SQLException, IOException {
-        persistencia.inserirPruebaReal(empreses, jugadors);
+        persistencia.inserirPruebaRealJugador(empreses, jugadors);
     }
 
     public void insertarEmpresesBaseDatos() throws SQLException, IOException {
