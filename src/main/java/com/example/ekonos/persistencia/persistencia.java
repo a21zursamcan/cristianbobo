@@ -51,13 +51,29 @@ public class persistencia {
      * @throws SQLException
      * @throws IOException
      */
+    //Accedir a la taula jugador
     public static void inserirPruebaReal(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
         inserirJugadors(jugadors);
+//        inserirDadesPartida(empreses);
+//        inserirDadesJuga(empreses, jugadors);
+        tancarBD();
+    }
+
+    //Accedir a la taula Partida
+    public static void inserirPruebaRealPartida(ArrayList empreses) throws SQLException, IOException {
+        iniciaBD();
         inserirDadesPartida(empreses);
+        tancarBD();
+    }
+
+    //Accedir a la taula Juga
+    public static void inserirPruebaRealJuga(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
+        iniciaBD();
         inserirDadesJuga(empreses, jugadors);
         tancarBD();
     }
+
 
     /** Metodo para leer y devolver la contraseña del fichero "fitxUsuari"
      * @return devuelve el usuario leido en el fichero
@@ -123,7 +139,7 @@ public class persistencia {
         }while(jugadorCreat==false);
     }
 
-    public static void inserirDadesJuga (ArrayList<jugador> jugadors, ArrayList<empresa> empresas) throws SQLException {
+    public static void inserirDadesJuga (ArrayList<jugador> jugadors, ArrayList<empresa> empreses) throws SQLException {
         boolean jugadorCreat = true;
         final String NOM_TAULA = "JUGA";
         int id_partida=0, id_jugador=0;
@@ -133,13 +149,15 @@ public class persistencia {
             for (int i = 0; i < jugadors.size(); i++) {
                 //Numero de accions del jugador en la empresa
 
-                nAccionsAlpha = empresas.get(0).numeroAccionsJugador(jugadors.get(i));
-                nAccionsBeta = empresas.get(1).numeroAccionsJugador(jugadors.get(i));
-                nAccionsDelta = empresas.get(2).numeroAccionsJugador(jugadors.get(i));
-                nAccionsGamma = empresas.get(3).numeroAccionsJugador(jugadors.get(i));
-                nAccionsEpsilon = empresas.get(4).numeroAccionsJugador(jugadors.get(i));
-                nAccionsOmega = empresas.get(5).numeroAccionsJugador(jugadors.get(i));
-                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + nAccionsAlpha + "," +nAccionsBeta + "," +nAccionsDelta + "," +nAccionsGamma + "," +nAccionsEpsilon + "," +nAccionsOmega +");"; //Terminar secuencia
+                nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
+                nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
+                nAccionsDelta = empreses.get(2).numeroAccionsJugador(jugadors.get(i));
+                nAccionsGamma = empreses.get(3).numeroAccionsJugador(jugadors.get(i));
+                nAccionsEpsilon = empreses.get(4).numeroAccionsJugador(jugadors.get(i));
+                nAccionsOmega = empreses.get(5).numeroAccionsJugador(jugadors.get(i));
+
+
+                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + "(nAccAlpha, nAccBeta, nAccDelta, nAccGamma, nAccEpsilon, nAccOmega)" + " VALUES (" + nAccionsAlpha + "," +nAccionsBeta + "," +nAccionsDelta + "," +nAccionsGamma + "," +nAccionsEpsilon + "," +nAccionsOmega +");"; //Terminar secuencia
 
                 Statement sta = null;
                 try {
@@ -181,6 +199,7 @@ public class persistencia {
                // nomEmpresa = empreses.get(i).nom;
                 //Dades del jugador
                 //Numero de factor de empresa
+
                 filialCrexementAlpha = empreses.get(0).nFilials; //sacar filial
                 filialCrexementBeta = empreses.get(1).nFilials;
                 filialCrexementDelta = empreses.get(2).nFilials;

@@ -43,12 +43,12 @@ public class taulell {
 
 
         jugadors=new ArrayList<jugador>();
-        jugadors.add(new jugador(null,1, "PericoZ"));
-        jugadors.add(new jugador(null,2, "PedroZ"));
-        jugadors.add(new jugador(null,3, "PacoZ"));
-        jugadors.add(new jugador(null,4, "PabloZ"));
-        jugadors.add(new jugador(null,5, "PatricioZ"));
-        jugadors.add(new jugador(null,6, "SamuelZ"));
+        jugadors.add(new jugador(null,1, "PericoM"));
+        jugadors.add(new jugador(null,2, "PedroM"));
+        jugadors.add(new jugador(null,3, "PacoM"));
+        jugadors.add(new jugador(null,4, "PabloM"));
+        jugadors.add(new jugador(null,5, "PatricioM"));
+        jugadors.add(new jugador(null,6, "SamuelM"));
 
         insertarJugadoresBaseDatos();
 
@@ -63,7 +63,8 @@ public class taulell {
         empreses.get(4).nFilials = 1;
         empreses.get(5).nFilials = 2;
 
-        persistencia.inserirDadesPartida(empreses);
+        //persistencia.inserirDadesPartida(empreses);
+        insertarEmpresesBaseDatos();
 
         empreses.get(0).accions.add(jugadors.get(0));
         empreses.get(0).accions.add(jugadors.get(5));
@@ -97,7 +98,9 @@ public class taulell {
         empreses.get(5).accions.add(jugadors.get(2));
         empreses.get(5).president=jugadors.get(4);
 
-        persistencia.inserirDadesJuga(jugadors, empreses);
+        insertarJugaBaseDatos();
+
+        //persistencia.inserirDadesJuga(jugadors, empreses);
     }
 
     public void ReproducirSonido(String nombreSonido) {
@@ -151,6 +154,14 @@ public class taulell {
 
     public void insertarJugadoresBaseDatos() throws SQLException, IOException {
         persistencia.inserirPruebaReal(empreses, jugadors);
+    }
+
+    public void insertarEmpresesBaseDatos() throws SQLException, IOException {
+        persistencia.inserirPruebaRealPartida(empreses);
+    }
+
+    public void insertarJugaBaseDatos() throws SQLException, IOException {
+        persistencia.inserirPruebaRealJuga(empreses, jugadors);
     }
 
 
