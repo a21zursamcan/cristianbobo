@@ -18,8 +18,8 @@ public class persistencia {
     private static Connection conexio = null;
     private static jugador objJugador;
 
-    /**
-     * @return Se ejecuta y devuelve la conexion de la base de datos lista para ser usada en la sentencias SQL
+
+    /** Se ejecuta la conexion de la base de datos lista para ser usada en la sentencias SQL
      * @throws SQLException
      * @throws IOException
      */
@@ -51,7 +51,6 @@ public class persistencia {
      * @throws SQLException
      * @throws IOException
      */
-    //Accedir a la taula jugador
     public static void inserirPruebaReal(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
         inserirJugadors(jugadors);
@@ -60,14 +59,24 @@ public class persistencia {
         tancarBD();
     }
 
-    //Accedir a la taula Partida
+    /** Acceder a la tabla Partida
+     * @param empreses array de empresas
+     * @throws SQLException
+     * @throws IOException
+     */
     public static void inserirPruebaRealPartida(ArrayList empreses) throws SQLException, IOException {
         iniciaBD();
         inserirDadesPartida(empreses);
         tancarBD();
     }
 
-    //Accedir a la taula Juga
+
+    /** Acceder a la tabla Juga
+     * @param empreses array de empresas
+     * @param jugadors array de jugadores
+     * @throws SQLException
+     * @throws IOException
+     */
     public static void inserirPruebaRealJuga(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
         inserirDadesJuga(empreses, jugadors);
@@ -99,9 +108,8 @@ public class persistencia {
         return linea;
     }
 
-    /**
-     * Metodo para crear jugadores en base de datos
-     *
+
+    /** Metodo para crear jugadores en base de datos
      * @param jugadors array de jugadores
      * @throws SQLException
      */
@@ -139,6 +147,65 @@ public class persistencia {
         }while(jugadorCreat==false);
     }
 
+    /** Metodo para crear en la base de datos los aumentos de las filiales en la partida.
+     * @param empreses array de empresas
+     * @throws SQLException
+     */
+    public static void inserirDadesPartida(ArrayList<empresa> empreses) throws SQLException {
+
+        //ArrayList<taulell> filials
+        //ArrayList<casella> filials
+
+        boolean jugadorCreat=true;
+        final String NOM_TAULA = "PARTIDA";
+
+        int filialCrexementAlpha=0, filialCrexementBeta=0, filialCrexementDelta=0, filialCrexementGamma=0, filialCrexementEpsilon=0, filialCrexementOmega=0;
+
+        String nomEmpresa = null;
+        //Autoincremente en idPartida
+        int idPartida=0;
+        do {
+            System.out.println("-BD: Insertant dades per partida-");
+            for (int i=0; i< empreses.size(); i++){
+                // nomEmpresa = empreses.get(i).nom;
+                //Dades del jugador
+                //Numero de factor de empresa
+
+                filialCrexementAlpha = empreses.get(0).nFilials; //sacar filial
+                filialCrexementBeta = empreses.get(1).nFilials;
+                filialCrexementDelta = empreses.get(2).nFilials;
+                filialCrexementGamma = empreses.get(3).nFilials;
+                filialCrexementEpsilon = empreses.get(4).nFilials;
+                filialCrexementOmega = empreses.get(5).nFilials;
+                //nomJugador = nomJugadorEscrit;
+                idPartida = 0;
+                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + idPartida + "," + filialCrexementAlpha + "," +  filialCrexementBeta +  "," + filialCrexementDelta +  ","  + filialCrexementGamma + "," + filialCrexementEpsilon +  "," + filialCrexementOmega + ");";
+
+                Statement sta = null;
+                try {
+                    sta = persistencia.conexio.createStatement();
+                    try {
+                        sta.executeUpdate(sentenciaSQL);
+                        jugadorCreat = true;
+                    } catch (SQLException e) {
+                        //System.out.println("Error, aquest element que es vol insertar a la base de dades te la mateixa Primary Key");
+                        System.err.println(e);
+                        jugadorCreat = false;
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } finally {
+                    sta.close();
+                }
+            }
+        }while(jugadorCreat==false);
+    }
+
+    /** Metodo para crear en la base de datos las acciones por jugador y empresa en la partida.
+     * @param jugadors array de jugadores
+     * @param empreses array de empresas
+     * @throws SQLException
+     */
     public static void inserirDadesJuga (ArrayList<jugador> jugadors, ArrayList<empresa> empreses) throws SQLException {
         boolean jugadorCreat = true;
         final String NOM_TAULA = "JUGA";
@@ -180,53 +247,5 @@ public class persistencia {
     }
 
 
-    public static void inserirDadesPartida(ArrayList<empresa> empreses) throws SQLException {
 
-        //ArrayList<taulell> filials
-        //ArrayList<casella> filials
-
-        boolean jugadorCreat=true;
-        final String NOM_TAULA = "PARTIDA";
-
-        int filialCrexementAlpha=0, filialCrexementBeta=0, filialCrexementDelta=0, filialCrexementGamma=0, filialCrexementEpsilon=0, filialCrexementOmega=0;
-
-        String nomEmpresa = null;
-        //Autoincremente en idPartida
-        int idPartida=0;
-        do {
-            System.out.println("-BD: Insertant dades per partida-");
-            for (int i=0; i< empreses.size(); i++){
-               // nomEmpresa = empreses.get(i).nom;
-                //Dades del jugador
-                //Numero de factor de empresa
-
-                filialCrexementAlpha = empreses.get(0).nFilials; //sacar filial
-                filialCrexementBeta = empreses.get(1).nFilials;
-                filialCrexementDelta = empreses.get(2).nFilials;
-                filialCrexementGamma = empreses.get(3).nFilials;
-                filialCrexementEpsilon = empreses.get(4).nFilials;
-                filialCrexementOmega = empreses.get(5).nFilials;
-                //nomJugador = nomJugadorEscrit;
-                idPartida = 0;
-                String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + idPartida + "," + filialCrexementAlpha + "," +  filialCrexementBeta +  "," + filialCrexementDelta +  ","  + filialCrexementGamma + "," + filialCrexementEpsilon +  "," + filialCrexementOmega + ");";
-
-                Statement sta = null;
-                try {
-                    sta = persistencia.conexio.createStatement();
-                    try {
-                        sta.executeUpdate(sentenciaSQL);
-                        jugadorCreat = true;
-                    } catch (SQLException e) {
-                        //System.out.println("Error, aquest element que es vol insertar a la base de dades te la mateixa Primary Key");
-                        System.err.println(e);
-                        jugadorCreat = false;
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                } finally {
-                    sta.close();
-                }
-            }
-        }while(jugadorCreat==false);
-    }
 }
