@@ -1,7 +1,10 @@
 package com.example.ekonos.persistencia;
 
+
 import com.example.ekonos.logica.empresa;
 import com.example.ekonos.logica.jugador;
+import com.example.ekonos.capaDades.jugadorsBD;
+import com.example.ekonos.capaDades.partidaBD;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -53,6 +56,7 @@ public class persistencia {
      */
     public static void inserirPruebaRealJugador(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
         iniciaBD();
+
         inserirDadesJugadors(jugadors);
 //        inserirDadesPartida(empreses);
 //        inserirDadesJuga(empreses, jugadors);
@@ -78,8 +82,10 @@ public class persistencia {
      * @throws IOException
      */
     public static void inserirPruebaRealJuga(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
+        ArrayList <jugador> jugadorsBDx = new ArrayList<>();
         iniciaBD();
-        inserirDadesJuga(empreses, jugadors);
+       // jugadorsBDx = jugadorsBD.obtenirJugadors(conexio);
+        inserirDadesJuga(empreses, jugadors, jugadorsBD.obtenirJugadors(conexio), partidaBD.obtenirPartida(conexio));
         tancarBD();
     }
 
@@ -202,9 +208,11 @@ public class persistencia {
     /** Metodo para crear en la base de datos las acciones por jugador y empresa en la partida.
      * @param jugadors array de jugadores
      * @param empreses array de empresas
+     * @param jugadorBS
+     * @param dadesPartidaBD
      * @throws SQLException
      */
-    public static void inserirDadesJuga (ArrayList<jugador> jugadors, ArrayList<empresa> empreses) throws SQLException {
+    public static void inserirDadesJuga(ArrayList<jugador> jugadors, ArrayList<empresa> empreses, ArrayList<jugador> jugadorBS, ArrayList<partidaBD> dadesPartidaBD) throws SQLException {
         boolean jugadorCreat = true;
         final String NOM_TAULA = "JUGA";
         int id_partida=0, id_jugador=0;
@@ -214,8 +222,9 @@ public class persistencia {
             for (int i = 0; i < jugadors.size(); i++) {
                 //Numero de accions del jugador en la empresa
 
-                id_partida = 1;
-                id_jugador = 1;
+               // id_partida = dadesPartidaBD.get(i).id;
+                id_partida = 3;
+                id_jugador = jugadorBS.get(i).id;
                 nAccionsAlpha = 1;
                 nAccionsBeta = 1;
                 nAccionsDelta = 1;

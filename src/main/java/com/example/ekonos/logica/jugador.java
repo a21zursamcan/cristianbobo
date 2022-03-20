@@ -16,7 +16,7 @@ public class jugador {
 	public boolean teAccions;
 	public String nom;
 
-	jugador(Image peça, int id, String nom) {
+	public jugador(Image peça, int id, String nom) {
 		this.peça=peça;
 		this.id=id;
 		this.nom=nom;
