@@ -202,7 +202,6 @@ public class persistencia {
                 } finally {
                     sta.close();
                 }
-
     }
 
     /** Metodo para crear en la base de datos las acciones por jugador y empresa en la partida.
@@ -212,7 +211,7 @@ public class persistencia {
      * @param dadesPartidaBD
      * @throws SQLException
      */
-    public static void inserirDadesJuga(ArrayList<jugador> jugadors, ArrayList<empresa> empreses, ArrayList<jugador> jugadorBS, ArrayList<partidaBD> dadesPartidaBD) throws SQLException {
+    public static void inserirDadesJuga(ArrayList<jugador> jugadors, ArrayList<empresa> empreses, ArrayList<jugador> jugadorBS, int dadesPartidaBD) throws SQLException {
         boolean jugadorCreat = true;
         final String NOM_TAULA = "JUGA";
         int id_partida=0, id_jugador=0;
@@ -224,7 +223,7 @@ public class persistencia {
 
                // id_partida = dadesPartidaBD.get(i).id;
                 //!!ID PARTIDA(JUGA) RELACIONADO CON IDPARTIDA(PARTIDA)!!
-                id_partida = 2;
+                id_partida = dadesPartidaBD;
                 id_jugador = jugadorBS.get(i).id;
                 nAccionsAlpha = 1;
                 nAccionsBeta = 1;
@@ -263,7 +262,4 @@ public class persistencia {
             }
         } while (jugadorCreat == false);
     }
-
-
-
 }

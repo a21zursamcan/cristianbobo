@@ -22,7 +22,7 @@ public class jugadorsBD {
                 jugadorsBD.add(new jugador(null, jugadorID, jugadorNom));
 
                 System.out.println("\nJugador: " + jugadorNom + ", " + jugadorID);
-                System.out.println("Nom Jugador: " + jugadorsBD.get(i).nom.toString());
+                System.out.println("Nom Jugador: " + jugadorsBD.get(i).nom);
                 System.out.println("ID Jugador: " + jugadorsBD.get(i).id);
                 i++;
             }
