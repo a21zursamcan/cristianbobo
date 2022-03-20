@@ -218,12 +218,13 @@ public class persistencia {
         int id_partida=0, id_jugador=0;
         int nAccionsAlpha, nAccionsBeta, nAccionsDelta, nAccionsGamma, nAccionsEpsilon, nAccionsOmega;
         do {
-            System.out.println("-BD: Insertant dades per partida-");
+            System.out.println("-BD: Insertant dades per juga-");
             for (int i = 0; i < jugadors.size(); i++) {
                 //Numero de accions del jugador en la empresa
 
                // id_partida = dadesPartidaBD.get(i).id;
-                id_partida = 3;
+                //!!ID PARTIDA(JUGA) RELACIONADO CON IDPARTIDA(PARTIDA)!!
+                id_partida = 2;
                 id_jugador = jugadorBS.get(i).id;
                 nAccionsAlpha = 1;
                 nAccionsBeta = 1;
