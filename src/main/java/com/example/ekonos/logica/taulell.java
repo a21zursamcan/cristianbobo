@@ -50,7 +50,6 @@ public class taulell {
         insertarJugadoresBaseDatos();
         jugadorActual = jugadors.get(0);
 //        hc.demoButton.setVisible(false);
-        actualitzarDades();
         empreses.get(0).nFilials = 3;
         empreses.get(1).nFilials = 4;
         empreses.get(2).nFilials = 2;
@@ -85,6 +84,8 @@ public class taulell {
         empreses.get(5).accions.add(jugadors.get(2));
         empreses.get(5).president=jugadors.get(4);
         insertarJugaBaseDatos();
+        actualitzarDades();
+        crearEstadistica();
         //persistencia.inserirDadesJuga(jugadors, empreses);
     }
     public void insertarJugadoresBaseDatos() throws SQLException, IOException {
@@ -96,6 +97,10 @@ public class taulell {
     public void insertarJugaBaseDatos() throws SQLException, IOException {
         persistencia.inserirPruebaRealJuga(empreses, jugadors);
     }
+
+   public void crearEstadistica() throws SQLException, IOException {
+      persistencia.inserirPruebaRealEstadistiques(empreses, jugadors);
+   }
 
     public void ReproducirSonido(String nombreSonido) {
         try {

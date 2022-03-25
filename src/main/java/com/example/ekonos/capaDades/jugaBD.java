@@ -32,13 +32,13 @@ public class jugaBD {
 
     public static ArrayList<jugaBD> obtenirJugades(Connection coneccio) throws SQLException {
         ArrayList <jugaBD> jugadesBD = new ArrayList<>();
-        String query = "select id_Jugador, id_Partida, nAccionsAlpha, nAccionsBeta, nAccionsDelta, nAccionsGamma, nAccionsEpsilon, nAccionsOmega from JUGA";
+         String query = "select id_partida, id_jugador, nAccAlpha, nAccBeta, nAccDelta, nAccGamma, nAccEpsilon, nAccOmega from JUGA";
         try (Statement stmt = coneccio.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             int i=0;
             while (rs.next()) {
 
-                String jugadorNom = rs.getString("nom");
+               // String jugadorNom = rs.getString("nom");
                 int jugadorID = rs.getInt("id_Jugador");
                 int partidaID = rs.getInt("id_Partida");
                 int nAlpha = rs.getInt("nAccAlpha");
@@ -49,14 +49,14 @@ public class jugaBD {
                 int nOmega = rs.getInt("nAccOmega");
                 jugadesBD.add(new jugaBD(jugadorID, partidaID, nAlpha, nBeta, nDelta, nGamma, nEpsilon, nOmega));
 
-                System.out.println("ID Jugador: " + jugadesBD.get(i));
-                System.out.println("ID Partida: " + jugadesBD.get(i));
+               /* System.out.println("ID Jugador: " + jugadesBD.get(i).toString());
+                System.out.println("ID Partida: " + jugadesBD.get(i).toString());
                 System.out.println("Alpha: " + nAlpha);
                 System.out.println("Beta: " + nBeta);
                 System.out.println("Delta: " + nDelta);
                 System.out.println("Gamma: " + nGamma);
                 System.out.println("Epsilon: " + nEpsilon);
-                System.out.println("Omega: " + nOmega);
+                System.out.println("Omega: " + nOmega);*/
                 i++;
             }
         } catch (SQLException e) {

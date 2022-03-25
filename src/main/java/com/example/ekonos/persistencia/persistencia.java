@@ -75,7 +75,6 @@ public class persistencia {
         tancarBD();
     }
 
-
     /** Acceder a la tabla Juga
      * @param empreses array de empresas
      * @param jugadors array de jugadores
@@ -90,6 +89,13 @@ public class persistencia {
         tancarBD();
     }
 
+    public static void inserirPruebaRealEstadistiques(ArrayList empreses, ArrayList jugadors) throws SQLException, IOException {
+        //ArrayList<jugaBD> jugades = new ArrayList<>();
+        iniciaBD();
+        //jugades=jugaBD.obtenirJugades(conexio);
+        estadisticaJoc(jugadors, empreses, jugaBD.obtenirJugades(conexio));
+        tancarBD();
+    }
 
     /** Metodo para leer y devolver la contraseña del fichero "fitxUsuari"
      * @return devuelve el usuario leido en el fichero
@@ -233,13 +239,13 @@ public class persistencia {
                 nAccionsEpsilon = 1;
                 nAccionsOmega = 1;
 
+
 //                nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
 //                nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
 //                nAccionsDelta = empreses.get(2).numeroAccionsJugador(jugadors.get(i));
 //                nAccionsGamma = empreses.get(3).numeroAccionsJugador(jugadors.get(i));
 //                nAccionsEpsilon = empreses.get(4).numeroAccionsJugador(jugadors.get(i));
 //                nAccionsOmega = empreses.get(5).numeroAccionsJugador(jugadors.get(i));
-
 
                 String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + id_partida + "," + id_jugador + "," + nAccionsAlpha + "," +nAccionsBeta + "," +nAccionsDelta + "," +nAccionsGamma + "," +nAccionsEpsilon + "," +nAccionsOmega +");"; //Terminar secuencia
 
@@ -263,9 +269,9 @@ public class persistencia {
             }
         } while (jugadorCreat == false);
     }
-    public void estadisticaJoc(ArrayList<jugador> jugadors, ArrayList<jugador> jugadorBS, ArrayList<empresa> empreses, ArrayList<jugaBD> jugadas){
+    public static void estadisticaJoc(ArrayList<jugador> jugadors, ArrayList<empresa> empreses, ArrayList<jugaBD> jugades){
         int filialCrexementAlpha=0, filialCrexementBeta=0, filialCrexementDelta=0, filialCrexementGamma=0, filialCrexementEpsilon=0, filialCrexementOmega=0;
-        int nAccionsAlpha=1, nAccionsBeta=1, nAccionsDelta=1, nAccionsGamma=1, nAccionsEpsilon=1, nAccionsOmega=1;
+        int numAccAlpha=1, nAccionsBeta=1, nAccionsDelta=1, nAccionsGamma=1, nAccionsEpsilon=1, nAccionsOmega=1;
         String nomJugador;
         int calculEstadisticaAlpha=0, calculEstadisticaBeta=0, calculEstadisticaDelta=0, calculEstadisticaGamma=0, calculEstadisticaEpsilon=0, calculEstadisticaOmega=0;
 
@@ -277,24 +283,30 @@ public class persistencia {
         filialCrexementOmega = empreses.get(5).nFilials;
 
 
-        for (int i=0; i<jugadas.size(); i++){
-            nomJugador = jugadors.get(i).nom;
-            nAccionsAlpha = jugadas.get(i).nAccionsAlpha;
-            nAccionsBeta = jugadas.get(i).nAccionsBeta;
-            nAccionsDelta = jugadas.get(i).nAccionsDelta;
-            nAccionsGamma = jugadas.get(i).nAccionsGamma;
-            nAccionsEpsilon =  jugadas.get(i).nAccionsEpsilon;
-            nAccionsOmega = jugadas.get(i).nAccionsOmega;
+        for (int i=0; i<jugadors.size(); i++){
+            nomJugador = jugadors.get(i).nom.toString();
+            numAccAlpha = jugades.get(i).nAccionsAlpha;
+            nAccionsBeta = jugades.get(i).nAccionsBeta;
+            nAccionsDelta = jugades.get(i).nAccionsDelta;
+            nAccionsGamma = jugades.get(i).nAccionsGamma;
+            nAccionsEpsilon =  jugades.get(i).nAccionsEpsilon;
+            nAccionsOmega = jugades.get(i).nAccionsOmega;
 
-            calculEstadisticaAlpha=nAccionsAlpha*filialCrexementAlpha;
+            calculEstadisticaAlpha=numAccAlpha*filialCrexementAlpha;
             calculEstadisticaBeta=nAccionsBeta*filialCrexementBeta;
             calculEstadisticaDelta=nAccionsDelta*filialCrexementDelta;
             calculEstadisticaGamma=nAccionsGamma*filialCrexementGamma;
             calculEstadisticaEpsilon=nAccionsEpsilon*filialCrexementEpsilon;
             calculEstadisticaOmega=nAccionsOmega*filialCrexementOmega;
-
+            System.out.println("\n-Encuesta-");
             System.out.println("El jugador " + nomJugador + ":");
             System.out.println("Puntuacio de Alpha: " + calculEstadisticaAlpha);
+            System.out.println("Puntuacio de Beta: " + calculEstadisticaBeta);
+            System.out.println("Puntuacio de Delta: " + calculEstadisticaDelta);
+            System.out.println("Puntuacio de Gamma: " + calculEstadisticaGamma);
+            System.out.println("Puntuacio de Epsilon: " + calculEstadisticaEpsilon);
+            System.out.println("Puntuacio de Omega: " + calculEstadisticaOmega);
+
         }
 
     }
