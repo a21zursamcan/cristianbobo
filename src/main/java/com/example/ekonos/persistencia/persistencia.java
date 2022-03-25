@@ -1,6 +1,7 @@
 package com.example.ekonos.persistencia;
 
 
+import com.example.ekonos.capaDades.jugaBD;
 import com.example.ekonos.logica.empresa;
 import com.example.ekonos.logica.jugador;
 import com.example.ekonos.capaDades.jugadorsBD;
@@ -262,10 +263,11 @@ public class persistencia {
             }
         } while (jugadorCreat == false);
     }
-    public void estadisticaJoc(ArrayList<jugador> jugadors, ArrayList<jugador> jugadorBS, ArrayList<empresa> empreses){
+    public void estadisticaJoc(ArrayList<jugador> jugadors, ArrayList<jugador> jugadorBS, ArrayList<empresa> empreses, ArrayList<jugaBD> jugadas){
         int filialCrexementAlpha=0, filialCrexementBeta=0, filialCrexementDelta=0, filialCrexementGamma=0, filialCrexementEpsilon=0, filialCrexementOmega=0;
         int nAccionsAlpha=1, nAccionsBeta=1, nAccionsDelta=1, nAccionsGamma=1, nAccionsEpsilon=1, nAccionsOmega=1;
         String nomJugador;
+        int calculEstadisticaAlpha=0, calculEstadisticaBeta=0, calculEstadisticaDelta=0, calculEstadisticaGamma=0, calculEstadisticaEpsilon=0, calculEstadisticaOmega=0;
 
         filialCrexementAlpha = empreses.get(0).nFilials; //sacar filial
         filialCrexementBeta = empreses.get(1).nFilials;
@@ -274,8 +276,24 @@ public class persistencia {
         filialCrexementEpsilon = empreses.get(4).nFilials;
         filialCrexementOmega = empreses.get(5).nFilials;
 
-        for (int i=0; i<jugadors.size(); i++){
+
+        for (int i=0; i<jugadas.size(); i++){
             nomJugador = jugadors.get(i).nom;
+            nAccionsAlpha = jugadas.get(i).nAccionsAlpha;
+            nAccionsBeta = jugadas.get(i).nAccionsBeta;
+            nAccionsDelta = jugadas.get(i).nAccionsDelta;
+            nAccionsGamma = jugadas.get(i).nAccionsGamma;
+            nAccionsEpsilon =  jugadas.get(i).nAccionsEpsilon;
+            nAccionsOmega = jugadas.get(i).nAccionsOmega;
+
+            calculEstadisticaAlpha=nAccionsAlpha*filialCrexementAlpha;
+            calculEstadisticaBeta=nAccionsBeta*filialCrexementBeta;
+            calculEstadisticaDelta=nAccionsDelta*filialCrexementDelta;
+            calculEstadisticaGamma=nAccionsGamma*filialCrexementGamma;
+            calculEstadisticaEpsilon=nAccionsEpsilon*filialCrexementEpsilon;
+            calculEstadisticaOmega=nAccionsOmega*filialCrexementOmega;
+
+            System.out.println("El jugador " + nomJugador );
         }
 
     }
