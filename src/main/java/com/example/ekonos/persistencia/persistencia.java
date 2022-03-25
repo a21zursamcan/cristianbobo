@@ -293,7 +293,8 @@ public class persistencia {
             calculEstadisticaEpsilon=nAccionsEpsilon*filialCrexementEpsilon;
             calculEstadisticaOmega=nAccionsOmega*filialCrexementOmega;
 
-            System.out.println("El jugador " + nomJugador );
+            System.out.println("El jugador " + nomJugador + ":");
+            System.out.println("Puntuacio de Alpha: " + calculEstadisticaAlpha);
         }
 
     }
