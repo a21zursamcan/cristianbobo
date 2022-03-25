@@ -49,23 +49,23 @@
                 </rowConstraints>
                 <children>
                     <Button fx:id="botonCarta1Empresa" disable="false" mnemonicParsing="false" onAction="#onEmpresaCard1Click" opacity="0.5" prefHeight="162.0" prefWidth="239.0" style="-fx-border-color: black;" visible="false" />
-                    <Button fx:id="botonColorCarta1Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard1Click" opacity="0.5" prefHeight="99.0" prefWidth="163.0" style="-fx-border-color: black;" visible="false" GridPane.rowIndex="1" />
-                    <Button fx:id="botonColorCarta1Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard1Click" opacity="0.5" prefHeight="61.0" prefWidth="129.0" style="-fx-border-color: black;" visible="false" GridPane.rowIndex="2" />
+                    <Button fx:id="botonColorCarta1Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard1Color1Click" opacity="0.5" prefHeight="99.0" prefWidth="163.0" style="-fx-border-color: black;" visible="false" GridPane.rowIndex="1" />
+                    <Button fx:id="botonColorCarta1Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard1Color2Click" opacity="0.5" prefHeight="61.0" prefWidth="129.0" style="-fx-border-color: black;" visible="false" GridPane.rowIndex="2" />
                     <Button fx:id="botonCarta2Empresa" mnemonicParsing="false" onAction="#onEmpresaCard2Click" opacity="0.5" prefHeight="136.0" prefWidth="179.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="1" />
-                    <Button fx:id="botonColorCarta2Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard2Click" opacity="0.5" prefHeight="104.0" prefWidth="163.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                    <Button fx:id="botonColorCarta2Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard2Click" opacity="0.5" prefHeight="94.0" prefWidth="108.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Button fx:id="botonColorCarta2Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard2Color1Click" opacity="0.5" prefHeight="104.0" prefWidth="163.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Button fx:id="botonColorCarta2Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard2Color2Click" opacity="0.5" prefHeight="94.0" prefWidth="108.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     <Button fx:id="botonCarta3Empresa" mnemonicParsing="false" onAction="#onEmpresaCard3Click" opacity="0.5" prefHeight="61.0" prefWidth="161.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="2" />
-                    <Button fx:id="botonColorCarta3Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard3Click" opacity="0.5" prefHeight="61.0" prefWidth="139.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                    <Button fx:id="botonColorCarta3Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard3Click" opacity="0.5" prefHeight="69.0" prefWidth="188.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <Button fx:id="botonColorCarta3Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard3Color1Click" opacity="0.5" prefHeight="61.0" prefWidth="139.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <Button fx:id="botonColorCarta3Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard3Color2Click" opacity="0.5" prefHeight="69.0" prefWidth="188.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                     <Button fx:id="botonCarta4Empresa" mnemonicParsing="false" onAction="#onEmpresaCard4Click" opacity="0.5" prefHeight="142.0" prefWidth="184.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="3" />
-                    <Button fx:id="botonColorCarta4Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard4Click" opacity="0.5" prefHeight="98.0" prefWidth="159.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                    <Button fx:id="botonColorCarta4Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard4Click" opacity="0.5" prefHeight="143.0" prefWidth="237.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                    <Button fx:id="botonColorCarta4Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard4Color1Click" opacity="0.5" prefHeight="98.0" prefWidth="159.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                    <Button fx:id="botonColorCarta4Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard4Color2Click" opacity="0.5" prefHeight="143.0" prefWidth="237.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                     <Button fx:id="botonCarta5Empresa" mnemonicParsing="false" onAction="#onEmpresaCard5Click" opacity="0.5" prefHeight="61.0" prefWidth="146.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="4" />
-                    <Button fx:id="botonColorCarta5Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard5Click" opacity="0.5" prefHeight="94.0" prefWidth="152.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                    <Button fx:id="botonColorCarta5Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard5Color1Click" opacity="0.5" prefHeight="94.0" prefWidth="152.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                     <Button fx:id="botonColorCarta5Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard5Click" opacity="0.5" prefHeight="120.0" prefWidth="175.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                     <Button fx:id="botonCarta6Empresa" mnemonicParsing="false" onAction="#onEmpresaCard6Click" opacity="0.5" prefHeight="61.0" prefWidth="113.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="5" />
-                    <Button fx:id="botonColorCarta6Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard6Click" opacity="0.5" prefHeight="122.0" prefWidth="147.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                    <Button fx:id="botonColorCarta6Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard6Click" opacity="0.5" prefHeight="61.0" prefWidth="128.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                    <Button fx:id="botonColorCarta6Empresa1" mnemonicParsing="false" onAction="#onEmpresaCard6Color1Click" opacity="0.5" prefHeight="122.0" prefWidth="147.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                    <Button fx:id="botonColorCarta6Empresa2" mnemonicParsing="false" onAction="#onEmpresaCard6Color2Click" opacity="0.5" prefHeight="61.0" prefWidth="128.0" style="-fx-border-color: black;" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
                     <ImageView fx:id="imagenEmpresa1" fitHeight="73.0" fitWidth="99.0" mouseTransparent="true" onDragDetected="#onEmpresaCard1Click" pickOnBounds="true" preserveRatio="true" />
                     <ImageView fx:id="imagenEmpresa2" fitHeight="73.0" fitWidth="99.0" layoutX="10.0" layoutY="9.0" mouseTransparent="true" onDragDetected="#onEmpresaCard2Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
                     <ImageView fx:id="imagenEmpresa3" fitHeight="73.0" fitWidth="99.0" layoutX="108.0" layoutY="9.0" mouseTransparent="true" onDragDetected="#onEmpresaCard3Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
@@ -208,7 +208,7 @@
                             <Label layoutX="56.0" layoutY="4.0" text="VEN" textFill="WHITE" />
                         </children>
                     </Pane>
-                    <Pane layoutY="305.0" prefHeight="24.0" prefWidth="135.0" style="-fx-background-color: #424242;">
+                    <Pane layoutY="305.0" onMouseClicked="#passaTorn" prefHeight="24.0" prefWidth="135.0" style="-fx-background-color: #424242;">
                         <children>
                             <Label layoutX="26.0" layoutY="4.0" text="PASSA TORN" textFill="WHITE" />
                         </children>
@@ -406,48 +406,48 @@
                     <Button layoutX="544.0" layoutY="374.0" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="40.0" text="Button" />
                     <Pane layoutX="150.0" layoutY="35.0" prefHeight="267.0" prefWidth="286.0">
                         <children>
-                            <Pane layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
-                            <Pane layoutX="42.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="42.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="42.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="42.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="42.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="42.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="42.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
-                            <Pane layoutX="84.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="84.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="84.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="84.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="84.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="84.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="84.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
-                            <Pane layoutX="158.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="158.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="158.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="158.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="158.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="158.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="158.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
-                            <Pane layoutX="200.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="200.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="200.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="200.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="200.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="200.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="200.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
-                            <Pane layoutX="242.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
-                            <Pane layoutX="242.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
-                            <Pane layoutX="242.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
-                            <Pane layoutX="242.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
-                            <Pane layoutX="242.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
-                            <Pane layoutX="242.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
-                            <Pane layoutX="242.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="alphaFC1" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="alphaFC2" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="alphaFC3" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="alphaFC4" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="alphaFC5" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="alphaFC6" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="alphaFC7" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" />
+                            <Pane fx:id="betaFC1" layoutX="42.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="betaFC2" layoutX="42.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="betaFC3" layoutX="42.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="betaFC4" layoutX="42.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="betaFC5" layoutX="42.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="betaFC6" layoutX="42.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="betaFC7" layoutX="42.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #1a5b7a;" />
+                            <Pane fx:id="gammaFC1" layoutX="84.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="gammaFC2" layoutX="84.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="gammaFC3" layoutX="84.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="gammaFC4" layoutX="84.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="gammaFC5" layoutX="84.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="gammaFC6" layoutX="84.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="gammaFC7" layoutX="84.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #adcfee;" />
+                            <Pane fx:id="deltaFC1" layoutX="158.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="deltaFC2" layoutX="158.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="deltaFC3" layoutX="158.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="deltaFC4" layoutX="158.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="deltaFC5" layoutX="158.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="deltaFC6" layoutX="158.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="deltaFC7" layoutX="158.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #76a293;" />
+                            <Pane fx:id="epsilonFC1" layoutX="200.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="epsilonFC2" layoutX="200.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="epsilonFC3" layoutX="200.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="epsilonFC4" layoutX="200.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="epsilonFC5" layoutX="200.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="epsilonFC6" layoutX="200.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="epsilonFC7" layoutX="200.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #f5ecc3;" />
+                            <Pane fx:id="omegaFC1" layoutX="242.0" layoutY="2.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="omegaFC2" layoutX="242.0" layoutY="40.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="omegaFC3" layoutX="242.0" layoutY="78.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="omegaFC4" layoutX="242.0" layoutY="115.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="omegaFC5" layoutX="242.0" layoutY="153.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="omegaFC6" layoutX="242.0" layoutY="191.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
+                            <Pane fx:id="omegaFC7" layoutX="242.0" layoutY="228.0" opacity="0.0" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: #e59b9f;" />
                         </children>
                     </Pane>
                     <Pane layoutX="145.0" layoutY="316.0" mouseTransparent="true" prefHeight="99.0" prefWidth="286.0" />
@@ -517,12 +517,12 @@
                     <Image url="@images/next.png" />
                 </image>
             </ImageView>
-         <TextField fx:id="nomJugador" layoutX="958.0" layoutY="541.0" prefHeight="25.0" prefWidth="114.0" visible="false" />
-         <ImageView id="demoButton" fitHeight="38.0" fitWidth="114.0" layoutX="1203.0" onMouseClicked="#onDemoClick" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@images/demo.png" />
-            </image>
-         </ImageView>
+            <TextField fx:id="nomJugador" layoutX="958.0" layoutY="541.0" prefHeight="25.0" prefWidth="114.0" visible="false" />
+            <ImageView id="demoButton" fx:id="demoButton" fitHeight="38.0" fitWidth="114.0" layoutX="1203.0" onMouseClicked="#onDemoClick" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@images/demo.png" />
+                </image>
+            </ImageView>
         </children>
     </Pane>
 </VBox>
