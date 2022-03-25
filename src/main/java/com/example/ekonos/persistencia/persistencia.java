@@ -262,4 +262,21 @@ public class persistencia {
             }
         } while (jugadorCreat == false);
     }
+    public void estadisticaJoc(ArrayList<jugador> jugadors, ArrayList<jugador> jugadorBS, ArrayList<empresa> empreses){
+        int filialCrexementAlpha=0, filialCrexementBeta=0, filialCrexementDelta=0, filialCrexementGamma=0, filialCrexementEpsilon=0, filialCrexementOmega=0;
+        int nAccionsAlpha=1, nAccionsBeta=1, nAccionsDelta=1, nAccionsGamma=1, nAccionsEpsilon=1, nAccionsOmega=1;
+        String nomJugador;
+
+        filialCrexementAlpha = empreses.get(0).nFilials; //sacar filial
+        filialCrexementBeta = empreses.get(1).nFilials;
+        filialCrexementDelta = empreses.get(2).nFilials;
+        filialCrexementGamma = empreses.get(3).nFilials;
+        filialCrexementEpsilon = empreses.get(4).nFilials;
+        filialCrexementOmega = empreses.get(5).nFilials;
+
+        for (int i=0; i<jugadors.size(); i++){
+            nomJugador = jugadors.get(i).nom;
+        }
+
+    }
 }
