@@ -22,12 +22,14 @@ public class empresa {
 	public ArrayList<ImageView> ImatgesAccions;
 	public ArrayList<Pane> PaneFactorsDeCreixement=new ArrayList<>();
 	public int nFilials = 0;
+	boolean teFilial=false;
 
-	empresa(String nom, String color, ImageView imgPresident, ArrayList<ImageView> ImatgesAccions) {
+	empresa(String nom, String color, ImageView imgPresident, ArrayList<ImageView> ImatgesAccions, ArrayList<Pane> PaneFactorsDeCreixement) {
 		this.nom = nom;
 		this.color = color;
 		this.imgPresident=imgPresident;
 		this.ImatgesAccions=ImatgesAccions;
+		this.PaneFactorsDeCreixement=PaneFactorsDeCreixement;
 		creaCartayCasellaEmpresa();
 	}
 
@@ -42,10 +44,8 @@ public class empresa {
 	}
 
 	public void actualitzaFactorCreixement() {
-		for (int x=0; x<this.PaneFactorsDeCreixement.size();x++){
-			if (x>this.FactorCreixement){
-				PaneFactorsDeCreixement.get(x).setOpacity(0.5);
-			}
+		for (int x=0; x<FactorCreixement;x++){
+			PaneFactorsDeCreixement.get(x).setOpacity(0.5);
 		}
 	}
 
@@ -53,6 +53,7 @@ public class empresa {
 		for (int x=0; x<this.PaneFactorsDeCreixement.size();x++){
 			PaneFactorsDeCreixement.get(x).setOpacity(0);
 		}
+		FactorCreixement=0;
 	}
 
 	public void creaCartayCasellaEmpresa(){
@@ -97,6 +98,8 @@ public class empresa {
 	public void actualitzaImatgePresident(){
 		if(this.president!=null){
 			imgPresident.setImage(president.peça);
+		}else{
+			imgPresident.setImage(null);
 		}
 	}
 

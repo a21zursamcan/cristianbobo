@@ -11,10 +11,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import com.example.ekonos.logica.taulell;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 
 
 public class HelloController {
@@ -37,8 +39,12 @@ public class HelloController {
     public ArrayList<ImageView> accionsEpsilonImatges=new ArrayList<>();
     public ArrayList<ImageView> accionsOmegaImatges=new ArrayList<>();
 
+
     @FXML
-    public Button demoButton;
+    public Pane alphaFC1,alphaFC2,alphaFC3,alphaFC4,alphaFC5,alphaFC6,alphaFC7,betaFC1,betaFC2,betaFC3,betaFC4,betaFC5,betaFC6,betaFC7,gammaFC1,gammaFC2,gammaFC3,gammaFC4,gammaFC5,gammaFC6,gammaFC7,deltaFC1,deltaFC2,deltaFC3,deltaFC4,deltaFC5,deltaFC6,deltaFC7,epsilonFC1,epsilonFC2,epsilonFC3,epsilonFC4,epsilonFC5,epsilonFC6,epsilonFC7,omegaFC1,omegaFC2,omegaFC3,omegaFC4,omegaFC5,omegaFC6,omegaFC7;
+
+    @FXML
+    public ImageView demoButton;
 
     @FXML
     private TextField nomJugador;
@@ -70,7 +76,7 @@ public class HelloController {
             casella31, casella32, casella33, casella34, casella35, casella36;
 
     @FXML
-    private ImageView imgJugadorActual;
+    public ImageView imgJugadorActual;
 
     @FXML
     private Label titol1;
@@ -100,6 +106,13 @@ public class HelloController {
     //Imatgeview amb l'imatge ja assignada
     @FXML
     public ImageView imatgeAssignada1Empresa1, imatgeAssignada1Empresa2, imatgeAssignada1Empresa3, imatgeAssignada1Empresa4, imatgeAssignada1Empresa5, imatgeAssignada1Empresa6;
+
+    @FXML
+    protected void passaTorn() throws SQLException, IOException {
+        if(t.cartaColocada){
+            t.nouTorn();
+        }
+    }
 
     @FXML
     protected void onDemoClick() throws SQLException, IOException {
@@ -171,6 +184,91 @@ public class HelloController {
             actualitzaCartes();
         }
     }
+    @FXML
+    protected void onEmpresaCard1Color1Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor1Carta1);
+            t.jugadorActual.ma.remove(0);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard1Color2Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor2Carta1);
+            t.jugadorActual.ma.remove(0);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard2Color1Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor1Carta2);
+            t.jugadorActual.ma.remove(1);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard2Color2Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor2Carta2);
+            t.jugadorActual.ma.remove(1);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard3Color1Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor1Carta3);
+            t.jugadorActual.ma.remove(2);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard3Color2Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor2Carta3);
+            t.jugadorActual.ma.remove(2);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard4Color1Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor1Carta4);
+            t.jugadorActual.ma.remove(3);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard4Color2Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor2Carta4);
+            t.jugadorActual.ma.remove(3);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard5Color1Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor1Carta5);
+            t.jugadorActual.ma.remove(4);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard5Color2Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor2Carta5);
+            t.jugadorActual.ma.remove(4);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard6Color1Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor1Carta6);
+            t.jugadorActual.ma.remove(5);
+            actualitzaCartes();
+        }
+    }@FXML
+    protected void onEmpresaCard6Color2Click() throws SQLException, IOException {
+        if(t.cartaColocada==false){
+            t.clickAument(imagenColor2Carta6);
+            t.jugadorActual.ma.remove(5);
+            actualitzaCartes();
+        }
+    }
 
     //Metodo para esconder las cartas
 //    public void esconderCarta(Button cartaEmpresa, Button color1cartaEmpresa, Button color2cartaEmpresa, ImageView Empresa, ImageView colo1carta, ImageView color2carta) {
@@ -201,6 +299,7 @@ public class HelloController {
         next.setVisible(false);
 
         t.insertarJugadoresBaseDatos();
+        demoButton.setVisible(false);
     }
 
     public void setTitol1(String text) {
@@ -435,188 +534,189 @@ public class HelloController {
 
     //Caselles filials amb les cartes
 
+
     @FXML
-    public void casella1Click() {
+    public void casella1Click() throws SQLException, IOException {
         casellaXclick(casella1);
     }
 
     @FXML
-    public void casella2Click() {
+    public void casella2Click() throws SQLException, IOException {
         casellaXclick(casella2);
     }
 
     @FXML
-    public void casella3Click() {
+    public void casella3Click() throws SQLException, IOException {
         casellaXclick(casella3);
     }
 
     @FXML
-    public void casella4Click() {
+    public void casella4Click() throws SQLException, IOException {
         casellaXclick(casella4);
     }
 
     @FXML
-    public void casella5Click() {
+    public void casella5Click() throws SQLException, IOException {
         casellaXclick(casella5);
     }
 
     @FXML
-    public void casella6Click() {
+    public void casella6Click() throws SQLException, IOException {
         casellaXclick(casella6);
     }
 
     @FXML
-    public void casella7Click() {
+    public void casella7Click() throws SQLException, IOException {
         casellaXclick(casella7);
     }
 
     @FXML
-    public void casella8Click() {
+    public void casella8Click() throws SQLException, IOException {
         casellaXclick(casella8);
     }
 
     @FXML
-    public void casella9Click() {
+    public void casella9Click() throws SQLException, IOException {
         casellaXclick(casella9);
     }
 
     @FXML
-    public void casella10Click() {
+    public void casella10Click() throws SQLException, IOException {
         casellaXclick(casella10);
     }
 
     @FXML
-    public void casella11Click() {
+    public void casella11Click() throws SQLException, IOException {
         casellaXclick(casella11);
     }
 
     @FXML
-    public void casella12Click() {
+    public void casella12Click() throws SQLException, IOException {
         casellaXclick(casella12);
     }
 
     @FXML
-    public void casella13Click() {
+    public void casella13Click() throws SQLException, IOException {
         casellaXclick(casella13);
     }
 
     @FXML
-    public void casella14Click() {
+    public void casella14Click() throws SQLException, IOException {
         casellaXclick(casella14);
     }
 
     @FXML
-    public void casella15Click() {
+    public void casella15Click() throws SQLException, IOException {
         casellaXclick(casella15);
     }
 
     @FXML
-    public void casella16Click() {
+    public void casella16Click() throws SQLException, IOException {
         casellaXclick(casella16);
     }
 
     @FXML
-    public void casella17Click() {
+    public void casella17Click() throws SQLException, IOException {
         casellaXclick(casella17);
     }
 
     @FXML
-    public void casella18Click() {
+    public void casella18Click() throws SQLException, IOException {
         casellaXclick(casella18);
     }
 
     @FXML
-    public void casella19Click() {
+    public void casella19Click() throws SQLException, IOException {
         casellaXclick(casella19);
     }
 
     @FXML
-    public void casella20Click() {
+    public void casella20Click() throws SQLException, IOException {
         casellaXclick(casella20);
     }
 
     @FXML
-    public void casella21Click() {
+    public void casella21Click() throws SQLException, IOException {
         casellaXclick(casella21);
     }
 
     @FXML
-    public void casella22Click() {
+    public void casella22Click() throws SQLException, IOException {
         casellaXclick(casella22);
     }
 
     @FXML
-    public void casella23Click() {
+    public void casella23Click() throws SQLException, IOException {
         casellaXclick(casella23);
     }
 
     @FXML
-    public void casella24Click() {
+    public void casella24Click() throws SQLException, IOException {
         casellaXclick(casella24);
     }
 
     @FXML
-    public void casella25Click() {
+    public void casella25Click() throws SQLException, IOException {
         casellaXclick(casella25);
     }
 
     @FXML
-    public void casella26Click() {
+    public void casella26Click() throws SQLException, IOException {
         casellaXclick(casella26);
     }
 
     @FXML
-    public void casella27Click() {
+    public void casella27Click() throws SQLException, IOException {
         casellaXclick(casella27);
     }
 
     @FXML
-    public void casella28Click() {
+    public void casella28Click() throws SQLException, IOException {
         casellaXclick(casella28);
     }
 
     @FXML
-    public void casella29Click() {
+    public void casella29Click() throws SQLException, IOException {
         casellaXclick(casella29);
     }
 
     @FXML
-    public void casella30Click() {
+    public void casella30Click() throws SQLException, IOException {
         casellaXclick(casella30);
     }
 
     @FXML
-    public void casella31Click() {
+    public void casella31Click() throws SQLException, IOException {
         casellaXclick(casella31);
     }
 
     @FXML
-    public void casella32Click() {
+    public void casella32Click() throws SQLException, IOException {
         casellaXclick(casella32);
     }
 
     @FXML
-    public void casella33Click() {
+    public void casella33Click() throws SQLException, IOException {
         casellaXclick(casella33);
     }
 
     @FXML
-    public void casella34Click() {
+    public void casella34Click() throws SQLException, IOException {
         casellaXclick(casella34);
     }
 
     @FXML
-    public void casella35Click() {
+    public void casella35Click() throws SQLException, IOException {
         casellaXclick(casella35);
     }
 
     @FXML
-    public void casella36Click() {
+    public void casella36Click() throws SQLException, IOException {
         casellaXclick(casella36);
     }
 
     //Funcio per assignar les caselles de filial amb l'imatge de l'empressa
-    public void casellaXclick(ImageView casellaX) {
+    public void casellaXclick(ImageView casellaX) throws SQLException, IOException {
         t.colocaCasella(casellaX);
     }
 
