@@ -84,8 +84,14 @@ public class taulell {
         empreses.get(5).accions.add(jugadors.get(2));
         empreses.get(5).president=jugadors.get(4);
         insertarJugaBaseDatos();
-        actualitzarDades();
         crearEstadistica();
+        empreses.get(0).FactorCreixement = 3;
+        empreses.get(1).FactorCreixement = 2;
+        empreses.get(2).FactorCreixement = 4;
+        empreses.get(3).FactorCreixement = 1;
+        empreses.get(4).FactorCreixement = 5;
+        empreses.get(5).FactorCreixement = 3;
+        actualitzarDades();
         //persistencia.inserirDadesJuga(jugadors, empreses);
     }
     public void insertarJugadoresBaseDatos() throws SQLException, IOException {
