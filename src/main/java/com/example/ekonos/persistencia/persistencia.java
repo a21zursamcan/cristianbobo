@@ -232,20 +232,20 @@ public class persistencia {
                 //!!ID PARTIDA(JUGA) RELACIONADO CON IDPARTIDA(PARTIDA)!!
                 id_partida = dadesPartidaBD;
                 id_jugador = jugadorBS.get(i).id;
-                nAccionsAlpha = 1;
+/*                nAccionsAlpha = 1;
                 nAccionsBeta = 1;
                 nAccionsDelta = 1;
                 nAccionsGamma = 1;
                 nAccionsEpsilon = 1;
-                nAccionsOmega = 1;
+                nAccionsOmega = 1;*/
 
 
-//                nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
-//                nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
-//                nAccionsDelta = empreses.get(2).numeroAccionsJugador(jugadors.get(i));
-//                nAccionsGamma = empreses.get(3).numeroAccionsJugador(jugadors.get(i));
-//                nAccionsEpsilon = empreses.get(4).numeroAccionsJugador(jugadors.get(i));
-//                nAccionsOmega = empreses.get(5).numeroAccionsJugador(jugadors.get(i));
+                nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
+                nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
+                nAccionsDelta = empreses.get(2).numeroAccionsJugador(jugadors.get(i));
+                nAccionsGamma = empreses.get(3).numeroAccionsJugador(jugadors.get(i));
+                nAccionsEpsilon = empreses.get(4).numeroAccionsJugador(jugadors.get(i));
+                nAccionsOmega = empreses.get(5).numeroAccionsJugador(jugadors.get(i));
 
                 String sentenciaSQL = " INSERT INTO " + NOM_TAULA + " VALUES (" + id_partida + "," + id_jugador + "," + nAccionsAlpha + "," +nAccionsBeta + "," +nAccionsDelta + "," +nAccionsGamma + "," +nAccionsEpsilon + "," +nAccionsOmega +");"; //Terminar secuencia
 
