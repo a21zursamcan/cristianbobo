@@ -85,7 +85,7 @@ public class persistencia {
         ArrayList <jugador> jugadorsBDx = new ArrayList<>();
         iniciaBD();
        // jugadorsBDx = jugadorsBD.obtenirJugadors(conexio);
-        inserirDadesJuga(empreses, jugadors, jugadorsBD.obtenirJugadors(conexio), partidaBD.obtenirPartida(conexio));
+        inserirDadesJuga(jugadors, empreses, jugadorsBD.obtenirJugadors(conexio), partidaBD.obtenirPartida(conexio));
         tancarBD();
     }
 
@@ -232,13 +232,13 @@ public class persistencia {
                 //!!ID PARTIDA(JUGA) RELACIONADO CON IDPARTIDA(PARTIDA)!!
                 id_partida = dadesPartidaBD;
                 id_jugador = jugadorBS.get(i).id;
-/*                nAccionsAlpha = 1;
+                /*nAccionsAlpha = 1;
                 nAccionsBeta = 1;
                 nAccionsDelta = 1;
                 nAccionsGamma = 1;
                 nAccionsEpsilon = 1;
-                nAccionsOmega = 1;*/
-
+                nAccionsOmega = 1;
+*/
 
                 nAccionsAlpha = empreses.get(0).numeroAccionsJugador(jugadors.get(i));
                 nAccionsBeta = empreses.get(1).numeroAccionsJugador(jugadors.get(i));
@@ -306,7 +306,7 @@ public class persistencia {
             System.out.println("Puntuacio de Gamma: " + calculEstadisticaGamma);
             System.out.println("Puntuacio de Epsilon: " + calculEstadisticaEpsilon);
             System.out.println("Puntuacio de Omega: " + calculEstadisticaOmega);
-
+            System.out.println("Puntuació total: " + calculEstadisticaAlpha + calculEstadisticaBeta + calculEstadisticaDelta + calculEstadisticaGamma + calculEstadisticaEpsilon + calculEstadisticaOmega);
         }
 
     }
