@@ -95,7 +95,7 @@ public class taulell {
         //persistencia.inserirDadesJuga(jugadors, empreses);
     }
     public void insertarJugadoresBaseDatos() throws SQLException, IOException {
-        persistencia.inserirPruebaRealJugador(empreses, jugadors);
+        persistencia.inserirPruebaRealJugador(jugadors);
     }
     public void insertarEmpresesBaseDatos() throws SQLException, IOException {
         persistencia.inserirPruebaRealPartida(empreses);
